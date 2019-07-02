@@ -1,0 +1,148 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .header .header__menu
+        ul
+            li
+                a
+                    font-size: 14px
+
+    .intro-slider
+        .slick-dots
+            margin-left: -470px
+    
+    .cards-list 
+        .cards-list__item
+            padding-right: 15px
+            padding-left: 100px
+            .cards-list__item-icon
+                left: 15px
+
+
+    .footer 
+        .footer__menu 
+            ul 
+                li 
+                    font-size: 14px
+                    a
+                        font-size: 14px
+
+// ≥992px
++media-breakpoint-down(md)
+    .header
+        height: 67px
+        position: fixed
+        width: 100%
+        .header__logo
+            margin-top: 9px
+        .header__top, .header__bottom
+            display: none
+        .menu-toggler
+            display: block
+
+        .header__logo
+            width: 47px
+            height: 45.7px
+    .menu-openned
+        .mobile-menu
+            display: block
+
+
+    .heading
+        &.heading_lg
+            font-size: 40px
+        &.heading_md
+            font-size: 30px
+        &.heading_sm
+            font-size: 21px
+
+    .intro-slider
+        .slick-arrow
+            display: none !important
+        .slick-dots
+            bottom: 20px
+            margin-left: -350px
+
+    .cards-list
+        flex-wrap: wrap
+        .cards-list__item
+            width: 100%
+            &:after
+                display: none
+
+    .feedback-slider 
+        .feedback-slider__item 
+            .feedback-slider__item-heading
+                font-size: 18px
+            .feedback-slider__item-text
+                font-size: 14px
+
+    .news-slider 
+        .news-slider__item 
+            .news-slider__item-text
+                font-size: 14px
+
+
+    .footer
+        .footer__logo
+            margin-left: auto
+            margin-right: auto
+        .footer__menu
+            display: none
+        .footer__phones, .footer__mail
+            display: none
+        .visual-adjustment
+            display: none
+// ≥768px
++media-breakpoint-down(sm)
+    .intro-slider
+        .slick-dots
+            margin-left: -255px
+    .footer
+        .bottom-container
+            height: auto
+            .footer__bottom
+                text-align: center
+                height: 100px
+                position: relative
+        .social-icons
+            position: absolute
+            top: 15px
+            width: 100%
+            left: 15px
+            text-align: center
+            justify-content: center
+        .footer__copyright
+            width: 100%
+            top: 60px
+            left: 0
+// ≥576px
++media-breakpoint-down(xs)
+    .heading
+        &.heading_lg
+            font-size: 32px
+        &.heading_md
+            font-size: 24px
+        &.heading_sm
+            font-size: 18px
+    .intro-slider
+        .slick-dots
+            margin-left: 0
+            left: 15px
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
