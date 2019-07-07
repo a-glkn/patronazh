@@ -215,6 +215,13 @@ img
 		top: 16px
 
 .form
+	.form__control
+		margin-top: 20px
+
+	.form__label
+		font-size: 14px
+		color: #666666
+		margin-bottom: 15px
 	.form__input
 		color: #000
 		font-size: 14px
@@ -244,7 +251,7 @@ img
 		.btn
 			margin-left: 30px
 
-	&.form_site-search
+	&.form_site-search, &.form_filter
 		.form__input
 			background-color: #f9f9f9
 			border: 1px solid #eee
@@ -253,6 +260,20 @@ img
 			&::placeholder
 				color: #a3a2a2
 
+	&.form_filter
+		.form__input
+			height: 40px
+			padding-left: 8px
+			padding-right: 8px
+			width: 100%
+			max-width: none
+			margin-bottom: 10px
+
+		.btn
+			margin-top: 20px
+			display: block
+			margin-left: auto
+			margin-right: auto
 
 .cards-list
 	display: flex
@@ -528,5 +549,13 @@ img
 		left: 405px
 		top: 18px
 		line-height: 33px
+
+.section_catalog
+	.breadcrumbs
+		margin-bottom: 30px
+	.catalog
+		margin-top: 10px
+		.catalog__item
+			margin-top: 30px
 
 @import "media" // Always at the end

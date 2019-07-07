@@ -97,6 +97,9 @@
             display: none
         .visual-adjustment
             display: none
+    .section_catalog
+        .col-content
+            margin-top: 2em
 // ≥768px
 +media-breakpoint-down(sm)
     .intro-slider
@@ -120,6 +123,19 @@
             width: 100%
             top: 60px
             left: 0
+
+    .catalog 
+        .catalog__item 
+            .catalog__item-nums
+                justify-content: center
+            .catalog__item-top
+                flex-direction: column-reverse
+            .catalog__item-img
+                margin-top: 1em
+                margin-right: 0
+                img
+                    width: 100%
+                    height: auto
 // ≥576px
 +media-breakpoint-down(xs)
     .heading
@@ -133,6 +149,27 @@
         .slick-dots
             margin-left: 0
             left: 15px
+
+    .nums 
+        .nums__item 
+            span
+                font-size: 20px
+    .catalog 
+        .catalog__item 
+            .catalog__item-bottom
+                justify-content: center
+                flex-direction: column
+
+            .catalog-funcs
+                justify-content: center
+                .catalog-funcs__item
+                    margin-left: 5px
+                    margin-right: 5px
+
+            .btn
+                margin-bottom: 1em
+                margin-left: auto
+                margin-right: auto
 /*==========  Mobile First  ==========*/
 
 // ≤576px
