@@ -2,7 +2,12 @@
 
 
 /*==========  Desktop First  ==========*/
++media-breakpoint-down(xl)
+    .section_contacts
+        &:before
+            width: 65%
 
+    
 // ≥1200px
 +media-breakpoint-down(lg)
     .header .header__menu
@@ -10,7 +15,7 @@
             li
                 a
                     font-size: 14px
-
+    
     .intro-slider
         .slick-dots
             margin-left: -470px
@@ -30,6 +35,10 @@
                     font-size: 14px
                     a
                         font-size: 14px
+
+    
+    a.to-top
+        display: none
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -106,6 +115,15 @@
         .btn-back-container
             margin-bottom: 1em
             text-align: center
+
+    .section_contacts
+        &:before
+            width: 100%
+            background: #fff
+        .map
+            margin-top: 3em
+            position: relative
+            z-index: 5
 // ≥768px
 +media-breakpoint-down(sm)
     .intro-slider
