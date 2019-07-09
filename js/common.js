@@ -79,4 +79,27 @@ $(function() {
 		}, 100);
 	}
 	adjustMenu();
+
+	if( $('.side-menu').length ) {
+		$(window).scroll(function () { 
+			if( $(window).width() > 991 ) {
+				var offset = $('.col-sidebar').offset();
+				var top = offset.top;
+				var left = offset.left;
+	
+				var scrollTop = $(window).scrollTop();
+				
+				console.log(scrollTop, top);
+	
+				if(scrollTop > top) {
+					$('.side-menu').css('margin-top', scrollTop - top);
+				} else {
+					$('.side-menu').css('margin-top', 0);
+				}
+			} else {
+				$('.side-menu').css('margin-top', 0);
+			}
+		});
+	}
+	
 });

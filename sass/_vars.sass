@@ -28,6 +28,8 @@ $gutter: $grid-gutter-width
         background-color: #f9f9f9
         border-color: #eeeeee
         color: #000
+        &:hover
+            color: #fff
     &:hover
         background-color: #086799
 a.btn
@@ -435,6 +437,27 @@ a.btn
             justify-content: space-between
             margin-top: 20px
 
+    &.catalog_single
+        .catalog__item
+            margin-top: 0
+            border: 0
+            padding: 0
+            box-shadow: none
+            .catalog__item-nums
+                padding-bottom: 0.5em
+                border-bottom: 1px solid #eeeeee
+            .catalog-funcs
+                margin-top: 25px
+            .catalog__item-text
+                margin-top: 25px
+                padding-bottom: 2em
+                border-bottom: 1px solid #eeeeee
+
+            .catalog__item-img
+                img
+                    min-width: 268px
+                    width: 268px
+                    height: 268px
 
 .sidebar
     border-radius: 5px
@@ -445,6 +468,33 @@ a.btn
     padding-top: 10px
     border-radius: 5px
 
+.params
+    .params__item
+        display: flex
+        padding-top: 5px
+        .params__item-key
+            font-size: 16px
+            color: #666666
+            width: 50%
+            position: relative
+            padding-top: 5px
+            padding-bottom: 5px
+            &:after
+                content: ''
+                display: block
+                width: 1px
+                height: calc(100% + 5px)
+                position: absolute
+                right: 0
+                bottom: 0
+                background-color: #eeeeee
+        .params__item-value
+            font-size: 16px
+            width: 50%
+            color: #219cdc
+            padding-left: 25px
+            padding-top: 5px
+            padding-bottom: 5px
 
 .selectize-control.single .selectize-input, .selectize-dropdown.single
     border-color: #efefef
