@@ -220,6 +220,16 @@ img
 		font-size: 16px
 	.form__control
 		margin-top: 20px
+		&.form__control_inline
+			display: flex
+			width: 100%
+			.selectize-control
+				width: 100%
+
+			.form__label
+				min-width: 200px
+				margin-top: auto
+				margin-bottom: auto
 
 	.form__label
 		font-size: 14px
@@ -239,7 +249,16 @@ img
 			background-image: url(../img/icon-zoom.png)
 			background-repeat: no-repeat
 			background-position: 8px center
-
+	.form__textarea
+		height: 101px
+		padding-top: 10px
+		padding-bottom: 10px
+		padding-left: 20px
+		padding-right: 20px
+		width: 100%
+		resize: none
+		border-radius: 4px
+		font-size: 14px
 	&.form_search
 		width: 100%
 		padding-top: 50px
@@ -285,18 +304,22 @@ img
 			height: 41px
 			margin-bottom: 20px
 
-		.form__textarea
-			height: 101px
-			padding-top: 10px
-			padding-bottom: 10px
-			padding-left: 20px
-			padding-right: 20px
-			width: 100%
-			resize: none
-			border-radius: 4px
-			font-size: 14px
+		
 		.btn
 			margin-top: 20px
+
+	&.form_bd
+		.selectize-input
+   			background: #fff !important
+
+		.form__input, .form__textarea
+			border: 1px solid #efefef
+			margin-bottom: 20px
+
+		.checkbox
+			margin: 2em 0
+			color: #000
+			font-size: 14px
 	.checkbox
 		text-align: left
 		font-size: 14px
@@ -329,6 +352,16 @@ img
 			display: none
 			&:checked + label:before
 				background: url(../img/check.png) center no-repeat
+		&.checkbox_ltr
+			padding-left: 0
+			width: 300px
+			padding-right: 25px
+			label
+				&:before
+					left: auto
+					right: 0
+			
+	
 .cards-list
 	display: flex
 	.cards-list__item
@@ -338,6 +371,7 @@ img
 		padding-bottom: 45px
 		position: relative
 		border-radius: 4px
+		flex-basis: 33.33%
 		transition: .3s ease
 		&:after
 			content: ''
@@ -377,7 +411,23 @@ img
 			&:after
 				display: none
 
-.section_features
+	&.cards-list_bd-top
+		.cards-list__item
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				right: 30px
+				top: 0
+				width: calc(100% - 60px)
+				height: 1px
+				background-color: #cee5f0
+
+.section_gallery
+	img
+		width: 100%
+		height: auto
+		margin-bottom: 30px
 
 
 .feedback-slider
@@ -433,7 +483,15 @@ img
 		.feedback-slider__item-link
 			margin-top: 50px
 			
+		&.feedback-slider__item_bd
+			border: 1px solid #eeeeee
 
+		&.feedback-slider__item_no-img
+			padding-top: 35px
+
+	&.feedback-slider_no-pt
+		.slick-list
+			padding-top: 0
 .section_feedback
 	.feedback-slider
 		margin-top: 20px
@@ -472,6 +530,7 @@ img
 	.news-slider
 		margin-top: 40px
 
+.intro-screen
 
 .intro-slider
 	.slick-arrow

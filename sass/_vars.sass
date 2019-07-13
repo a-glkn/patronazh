@@ -542,3 +542,80 @@ a.to-top
         border-radius: 50%
         right: -84px
         top: -68px - 28px
+
+hr
+    border: 0
+    margin-top: 2em
+    margin-bottom: 2em
+    height: 1px
+    background-color: #eeeeee
+
+.table
+    overflow-x: scroll
+    position: relative
+    table
+        width: 100%
+        border-left: 1px solid #eeeeee
+        border-top: 1px solid #eeeeee
+        border-radius: 5px
+        overflow: hidden
+        th
+            background-color: #219cdc
+            color: #fff
+            border-right: 1px solid #eeeeee
+            border-bottom: 1px solid #eeeeee
+
+        td
+            border-right: 1px solid #eeeeee
+            border-bottom: 1px solid #eeeeee
+            background-color: #fff
+            color: #000000
+        td, th
+            padding-left: 18px
+            padding-right: 18px
+            padding-top: 14px
+            padding-bottom: 14px
+            font-size: 14px
+            
+
+
+.inputfile
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+
+.inputfile + label
+    max-width: 80%
+    font-size: 12px
+    color: #219cdc !important
+    text-overflow: ellipsis
+    white-space: nowrap
+    cursor: pointer
+    display: inline-block
+    overflow: hidden
+
+
+
+.inputfile:focus + label,
+.inputfile.has-focus + label
+    outline: 1px dotted #000
+    outline: -webkit-focus-ring-color auto 5px
+
+
+
+.inputfile + label svg
+    width: 41px
+    height: 41px
+
+.inputfile-box label
+    display: flex
+    svg, span
+        margin-top: auto
+        margin-bottom: auto
+
+    svg
+        margin-right: 10px

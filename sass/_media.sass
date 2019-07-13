@@ -24,8 +24,14 @@
         .cards-list__item
             padding-right: 15px
             padding-left: 100px
+            flex-basis: 100%
             .cards-list__item-icon
                 left: 15px
+
+        &.cards-list_bd-top
+            .cards-list__item
+                &:before
+                    display: none
 
 
     .footer 
@@ -124,6 +130,16 @@
             margin-top: 3em
             position: relative
             z-index: 5
+
+    
+    .form
+        .form__control
+            &.form__control_inline
+                display: flex
+                flex-direction: column
+
+                .form__label
+                    margin-bottom: 1em
 // ≥768px
 +media-breakpoint-down(sm)
     .intro-slider
