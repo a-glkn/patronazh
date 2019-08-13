@@ -57,6 +57,13 @@ $(function() {
 		pauseOnFocus: false,
 	});
 
+	$('.img-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+	});
+
 	$('.menu-toggler').on('click', function(e) {
 		$('.mobile-menu, .mobile-menu__inner').height( $(window).height() - $('.header').height() );
 		

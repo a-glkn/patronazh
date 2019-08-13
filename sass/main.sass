@@ -50,6 +50,7 @@ img
 	max-width: 100%
 	height: auto
 
+
 .geo-menu
 	font-size: 14px
 	color: #666666
@@ -71,8 +72,55 @@ img
 		background-image: url(../img/icon-geo.png)
 		background-repeat: no-repeat
 		background-position: 0 0
+	.icon
+		width: 16px
+		height: 22px
+		fill: $primary
+		position: absolute
+		top: 1px
+		left: 0
 	&:hover
-		color: $accent
+		span
+			color: $primary
+	.geo-menu__list
+		position: absolute
+		top: 0
+		padding-top: 54px
+		left: -14px
+		display: none
+		z-index: 10
+		.geo-menu__list-inner
+			background-color: #fff
+			padding-left: 30px
+			padding-right: 30px
+			padding-top: 18px
+			padding-bottom: 18px
+			border-radius: 10px
+			position: relative
+			box-shadow: 0px 10px 16px 0px rgba(0, 5, 7, 0.2)
+			&:before
+				content: ''
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 13.5px 12px 13.5px
+				border-color: transparent transparent #ffffff transparent
+				position: absolute
+				top: -12px
+				left: 15px
+		.geo-menu__list__item
+			a
+				font-size: 14px
+				color: #101010
+				text-decoration: none
+				&:hover
+					color: $primary
+			&.active
+				a
+					color: $primary
+	&:hover
+		.geo-menu__list
+			display: block
 
 .header
 	z-index: 100
@@ -499,32 +547,171 @@ img
 
 
 
-.news-slider
+.news-slider, .news-archive
 	.slick-dots
 		margin-top: 70px
-	.news-slider__item
+	&__item
 		margin-left: 12px
 		margin-right: 12px
-		.news-slider__item-img
+		&-img
 			img
 				border-radius: 4px
 				width: 100%
 				height: auto
 
-		.news-slider__item-text
+		&-text
 			margin-top: 25px
 			font-size: 16px
 			color: #000000
 			line-height: 1.5
 			padding-bottom: 15px
-		
-		.news-slider__item-date
+		&-tags
+			margin-bottom: 15px
+			a
+				font-size: 12px
+				color: #219cdc
+				text-transform: uppercase
+		&-date
 			font-size: 12px
 			padding-top: 17px
 			color: #666666
 			border-top: 1px solid #eaeaea
-		.news-slider__item-link
+		&-link
 			margin-top: 2em
+
+.share
+	display: flex
+	span
+		font-size: 12px
+		color: #219cdc
+		text-transform: uppercase
+		margin-top: auto
+		margin-bottom: auto
+	.ya-share2
+		margin-top: auto
+		margin-bottom: auto
+		margin-left: 20px
+		.ya-share2__link
+			
+		.ya-share2__item
+			margin-left: 3px
+			margin-right: 3px
+
+		.ya-share2__badge
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			background-color: #eaeaea
+
+		.ya-share2__icon
+			width: 32px
+			height: 32px
+			background-repeat: no-repeat !important
+			background-position: center
+		
+		.ya-share2__item_service_vkontakte
+			.ya-share2__icon
+				background-image: url(../img/vk.png) !important
+
+		.ya-share2__item_service_facebook
+			.ya-share2__icon
+				background-image: url(../img/fb.png) !important
+
+.news-archive
+	&__item
+		margin-left: 0
+		margin-right: 0
+		padding-bottom: 20px
+		border: 1px solid #eeeeee
+		border-radius: 6px
+		margin-bottom: 30px
+		transition: .3s ease
+		&-text
+			padding-left: 30px
+			padding-right: 30px
+		&-date
+			margin-left: 30px
+			margin-right: 30px
+		&-tags
+			margin-left: 30px
+			margin-right: 30px
+
+		&-link
+			margin-left: 30px
+		
+		&:hover
+			box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+
+.date
+	font-size: 12px
+	color: #666666
+
+.section_news_single
+	.date
+		margin-bottom: 2em
+	.breadcrumbs
+		margin-bottom: 30px
+	.img-slider
+		margin: 1em 0 2em
+	.tags
+		margin-top: 2em
+		padding-top: 20px
+		padding-bottom: 16px
+		border-top: 1px solid #eaeaea
+		border-bottom: 1px solid #eaeaea
+
+	.share
+		margin-top: 20px
+.typo
+	img
+		margin: 1em 0
+	p
+		font-size: 16px
+		line-height: 1.5
+		margin: 1em 0
+
+.section_news_archive
+	.breadcrumbs
+		margin-bottom: 30px
+	.news-archive
+		margin-top: 25px
+	.row-filters
+		margin-top: 40px
+
+	.pagination
+		margin-top: 30px
+.pagination
+	display: flex
+	color: #000000
+	font-size: 16px
+	span
+		color: #a4a4a4
+		margin-right: 10px
+		margin-top: auto
+		margin-bottom: auto
+	a
+		margin-right: 10px
+		color: #000000
+		text-decoration: none
+		transition: .3s
+		margin-top: auto
+		margin-bottom: auto
+		&.next, &.prev
+			width: 41px
+			height: 41px
+			border: 1px solid #efefef
+			background-color: #fff
+			border-radius: 50%
+			background-position: center
+			background-repeat: no-repeat
+			background-image: url(../img/arr-pagi.png)
+			&:hover
+				background-color: #f9f9f9
+
+		&.prev
+			transform: rotate(180deg)
+
+
 
 .section_news
 	.news-slider
@@ -584,6 +771,12 @@ img
 
 		.btn
 			margin-top: 2em
+
+.img-slider
+	.slick-dots
+		position: relative
+		z-index: 1
+		margin-top: -50px
 
 .phones
 	a
