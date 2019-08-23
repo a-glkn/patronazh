@@ -64,6 +64,12 @@ $(function() {
 		dots: true,
 	});
 
+	$('.img-slider').click(function (e) { 
+		e.preventDefault();
+		
+		$(this).slick('slickNext');
+	});
+
 	$('.menu-toggler').on('click', function(e) {
 		$('.mobile-menu, .mobile-menu__inner').height( $(window).height() - $('.header').height() );
 		
