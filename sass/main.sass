@@ -497,6 +497,8 @@ img
 		position: relative
 		padding-top: 90px
 		padding-bottom: 25px
+		&.feedback-slider__item_no-img
+			padding-top: 25px
 		.feedback-slider__item-img
 			position: absolute
 			margin-top: -56px
@@ -554,16 +556,22 @@ img
 		margin-left: 12px
 		margin-right: 12px
 		&-heading
-			margin-top: 2em
+			margin-top: 30px
 			padding-left: 30px
 			padding-right: 30px
 			font-size: 22px
 			color: #000000
 			width: 100%
+			line-height: 1.2
 			display: block
 			text-decoration: none !important
 			padding-bottom: 10px
 			position: relative
+			a
+				color: #000000
+				text-decoration: none
+				&:hover
+					color: $accent !important
 			&:after
 				content: ''
 				display: block
