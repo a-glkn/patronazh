@@ -10,6 +10,9 @@
     
 // ≥1200px
 +media-breakpoint-down(lg)
+    .bar
+        .bar__heading
+            font-size: 24px
     .header .header__menu
         ul
             li
@@ -209,8 +212,32 @@
                 img
                     width: 100% !important
                     height: auto !important
+
+    .form .checkbox.checkbox_lg label, .form .form__label.form__label_lg
+        font-size: 14px
+
+    .form .form__label.form__label_xl
+        font-size: 18px
+
+    .form .checkbox.checkbox_lg
+        width: 280px
+
+    .form .phone-number
+        font-size: 24px
 // ≥576px
 +media-breakpoint-down(xs)
+    .footer .footer__copyright
+        font-size: 12px
+    .bar
+        padding-left: 20px
+        padding-top: 30px
+        padding-bottom: 30px
+        height: auto
+        flex-direction: column
+        .bar__heading
+            margin-bottom: 1em
+            font-size: 18px
+
     .heading
         &.heading_lg
             font-size: 32px

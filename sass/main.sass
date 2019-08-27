@@ -278,11 +278,21 @@ img
 				min-width: 200px
 				margin-top: auto
 				margin-bottom: auto
+		&.form__control_disabled
+			opacity: 0.5
 
+			.selectize-control
+				z-index: -1
 	.form__label
 		font-size: 14px
 		color: #666666
 		margin-bottom: 15px
+		&.form__label_lg
+			font-size: 18px
+		&.form__label_xl
+			font-size: 22px
+			color: #219cdc
+
 	.form__input
 		color: #000
 		font-size: 14px
@@ -408,8 +418,25 @@ img
 				&:before
 					left: auto
 					right: 0
-			
-	
+		&.checkbox_lg
+			width: 393px
+			label
+				color: #000
+				font-size: 18px
+	.phone-number
+		font-size: 38px
+		color: #000
+		border-radius: 4px
+		padding-left: 15px
+		padding-right: 15px
+		border: 1px solid #eeeeee
+		display: inline-block
+		text-decoration: none
+		padding-top: 20px
+		padding-bottom: 15px
+		a
+			color: #000
+			text-decoration: none
 .cards-list
 	display: flex
 	.cards-list__item
@@ -941,6 +968,27 @@ img
 			margin-top: 30px
 	.col-sidebar
 		padding-top: 20px
+
+.bar
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	height: 140px
+	border-radius: 3px
+	display: flex
+	justify-content: space-between
+	padding-left: 40px
+	padding-right: 20px
+	.bar__heading
+		font-size: 36px
+		color: #000000
+		margin-top: auto
+		margin-bottom: auto
+		span
+			color: #219cdc
+	.btn
+		margin-top: auto
+		margin-bottom: auto
 
 .side-menu
 	border: 1px solid #efefef
