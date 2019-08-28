@@ -23,6 +23,17 @@ $gutter: $grid-gutter-width
     border: 0
     transition: .3s ease
     cursor: pointer
+    border: 1px solid #219cdc
+    &.btn_bd
+        background-color: #f9f9f9
+        border-color: #eeeeee
+        color: #000
+        padding-left: 15px
+        padding-right: 15px
+        width: auto
+        font-size: 14px
+        &:hover
+            color: #fff
     &:hover
         background-color: #086799
 a.btn
@@ -32,6 +43,20 @@ a.btn
     display: inline-block
     &:hover
         color: #fff
+
+.btn_zoom
+    display: flex
+    cursor: pointer
+    text-decoration: none !important
+    svg
+        width: 41px
+        height: 41px
+    span
+        margin-left: 10px
+        color: #219cdc
+        font-size: 12px
+        margin-top: auto
+        margin-bottom: auto
 
 .link
     font-size: 12px
@@ -316,3 +341,299 @@ a.btn
         transition: .3s ease
         &:hover
             opacity: .7
+
+
+.breadcrumbs
+    font-size: 14px
+    color: #000000
+    a
+        color: #000000
+        text-decoration: none
+        &:hover
+            color: $accent
+    span
+        color: #219cdc
+
+.nums
+    display: flex
+    .nums__item
+        text-align: center
+        min-width: 70px
+        padding-left: 20px
+        padding-right: 20px
+        position: relative
+        line-height: 1
+        &:after
+            content: ''
+            display: block
+            width: 1px
+            height: 41px
+            background-color: #eeeeee
+            position: absolute
+            right: 0
+            top: 50%
+            margin-top: -20px
+        div
+            font-size: 14px
+            color: #666666
+            margin-bottom: 7px
+        span
+            font-size: 26px
+            color: #219cdc
+            display: block
+            margin-bottom: 4px
+        &:last-child
+            &:after
+                display: none
+
+.catalog-funcs
+    display: flex
+    .catalog-funcs__item
+        width: 35px
+        height: 35px
+        display: inline-block
+        text-decoration: none
+        margin-left: 20px
+        svg
+            width: 35px
+            height: 35px
+            fill: #A3A2A2
+            transition: .3s ease
+        &:hover
+            svg
+                fill: $accent
+
+.catalog
+    .catalog__item
+        padding: 20px
+        border: 1px solid #efefef
+        border-radius: 5px
+        transition: .3s ease
+        &:hover
+            border-color: transparent
+            box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+        .catalog__item-top
+            display: flex
+            width: 100%
+
+        .catalog__item-img
+            margin-right: 20px
+            img
+                min-width: 180px
+                width: 180px
+                height: 180px
+                border-radius: 4px
+                overflow: hidden
+
+        .catalog__item-info
+            width: 100%
+
+        .catalog__item-heading
+            width: 100%
+            font-size: 24px
+            color: #000000
+            padding-bottom: 0.5em
+            border-bottom: 1px solid #eeeeee
+
+        .catalog__item-addr
+            padding-top: 1em
+            padding-bottom: 1em
+            font-size: 16px
+            color: $accent
+            border-bottom: 1px solid #eeeeee
+
+        .catalog__item-nums
+            margin-top: 20px
+
+        .catalog__item-text
+            margin-top: 20px
+            font-size: 14px
+            color: #666666
+
+        .catalog__item-bottom
+            display: flex
+            justify-content: space-between
+            margin-top: 20px
+
+    &.catalog_single
+        .catalog__item
+            margin-top: 0
+            border: 0
+            padding: 0
+            box-shadow: none
+            .catalog__item-nums
+                padding-bottom: 0.5em
+                border-bottom: 1px solid #eeeeee
+            .catalog-funcs
+                margin-top: 25px
+            .catalog__item-text
+                margin-top: 25px
+                padding-bottom: 2em
+                border-bottom: 1px solid #eeeeee
+
+            .catalog__item-img
+                img
+                    min-width: 268px
+                    width: 268px
+                    height: 268px
+
+.sidebar
+    border-radius: 5px
+    box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+    padding-left: 10px
+    padding-right: 10px
+    padding-bottom: 25px
+    padding-top: 10px
+    border-radius: 5px
+
+.params
+    .params__item
+        display: flex
+        padding-top: 5px
+        .params__item-key
+            font-size: 16px
+            color: #666666
+            width: 50%
+            position: relative
+            padding-top: 5px
+            padding-bottom: 5px
+            &:after
+                content: ''
+                display: block
+                width: 1px
+                height: calc(100% + 5px)
+                position: absolute
+                right: 0
+                bottom: 0
+                background-color: #eeeeee
+        .params__item-value
+            font-size: 16px
+            width: 50%
+            color: #219cdc
+            padding-left: 25px
+            padding-top: 5px
+            padding-bottom: 5px
+
+.selectize-control.single .selectize-input, .selectize-dropdown.single
+    border-color: #efefef
+
+
+.selectize-input
+    background: #f9f9f9 !important
+    padding-top: 10px
+    padding-bottom: 10px
+    font-size: 14px
+    color: #010101
+
+.selectize-control .selectize-input
+    box-shadow: none !important
+
+.selectize-control .selectize-input:after
+    content: ''
+    background-image: url(../img/arr-down-2.png)
+    width: 20px
+    height: 10px
+    background-repeat: no-repeat
+    background-position: 0 0
+    border: 0
+
+.selectize-control.single .selectize-input.dropdown-active:after
+    transform: rotate(180deg)
+
+
+a.to-top
+    border: 1px solid #eaeaea
+    width: 64px
+    height: 64px
+    background-color: #fff
+    background-image: url(../img/arr-top.png)
+    background-position: center 23px
+    background-repeat: no-repeat
+    display: inline-block
+
+.footer
+    .container
+        position: relative
+    a.to-top
+        z-index: 10
+        position: absolute
+        border-radius: 50%
+        right: -84px
+        top: -68px - 28px
+
+hr
+    border: 0
+    margin-top: 2em
+    margin-bottom: 2em
+    height: 1px
+    background-color: #eeeeee
+
+.table
+    overflow-x: scroll
+    position: relative
+    table
+        width: 100%
+        border-left: 1px solid #eeeeee
+        border-top: 1px solid #eeeeee
+        border-radius: 5px
+        overflow: hidden
+        th
+            background-color: #219cdc
+            color: #fff
+            border-right: 1px solid #eeeeee
+            border-bottom: 1px solid #eeeeee
+
+        td
+            border-right: 1px solid #eeeeee
+            border-bottom: 1px solid #eeeeee
+            background-color: #fff
+            color: #000000
+        td, th
+            padding-left: 18px
+            padding-right: 18px
+            padding-top: 14px
+            padding-bottom: 14px
+            font-size: 14px
+            
+
+
+.inputfile
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+
+.inputfile + label
+    max-width: 80%
+    font-size: 12px
+    color: #219cdc !important
+    text-overflow: ellipsis
+    white-space: nowrap
+    cursor: pointer
+    display: inline-block
+    overflow: hidden
+
+
+
+.inputfile:focus + label,
+.inputfile.has-focus + label
+    outline: 1px dotted #000
+    outline: -webkit-focus-ring-color auto 5px
+
+
+
+.inputfile + label svg
+    width: 41px
+    height: 41px
+
+.inputfile-box label
+    display: flex
+    svg, span
+        margin-top: auto
+        margin-bottom: auto
+
+    svg
+        margin-right: 10px

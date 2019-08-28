@@ -2,15 +2,23 @@
 
 
 /*==========  Desktop First  ==========*/
++media-breakpoint-down(xl)
+    .section_contacts
+        &:before
+            width: 65%
 
+    
 // ≥1200px
 +media-breakpoint-down(lg)
+    .bar
+        .bar__heading
+            font-size: 24px
     .header .header__menu
         ul
             li
                 a
                     font-size: 14px
-
+    
     .intro-slider
         .slick-dots
             margin-left: -470px
@@ -19,8 +27,14 @@
         .cards-list__item
             padding-right: 15px
             padding-left: 100px
+            flex-basis: 100%
             .cards-list__item-icon
                 left: 15px
+
+        &.cards-list_bd-top
+            .cards-list__item
+                &:before
+                    display: none
 
 
     .footer 
@@ -31,12 +45,20 @@
                     a
                         font-size: 14px
 
+    
+    a.to-top
+        display: none
+
 // ≥992px
 +media-breakpoint-down(md)
+    body
+        padding-top: 67px
     .header
         height: 67px
         position: fixed
         width: 100%
+        top: 0
+        left: 0
         .header__logo
             margin-top: 9px
         .header__top, .header__bottom
@@ -97,8 +119,50 @@
             display: none
         .visual-adjustment
             display: none
+    .section_catalog
+        .col-content
+            margin-top: 2em
+
+
+    .section_catalog
+        .btn-back-container
+            margin-bottom: 1em
+            text-align: center
+
+    .section_contacts
+        &:before
+            width: 100%
+            background: #fff
+        .map
+            margin-top: 3em
+            position: relative
+            z-index: 5
+
+    
+    .form
+        .form__control
+            &.form__control_inline
+                display: flex
+                flex-direction: column
+
+                .form__label
+                    margin-bottom: 1em
 // ≥768px
 +media-breakpoint-down(sm)
+
+    .typo
+        h1
+            font-size: 32px
+        h2
+            font-size: 24px
+        h3
+            font-size: 22px
+        h4
+            font-size: 20px
+        h5
+            font-size: 19px
+        h6
+            font-size: 18px
     .intro-slider
         .slick-dots
             margin-left: -255px
@@ -120,8 +184,60 @@
             width: 100%
             top: 60px
             left: 0
+
+    .catalog 
+        .catalog__item 
+            .catalog__item-nums
+                justify-content: center
+            .catalog__item-top
+                flex-direction: column-reverse
+            .catalog__item-img
+                margin-top: 1em
+                margin-right: 0
+                img
+                    width: 100%
+                    height: auto
+
+    .params 
+        .params__item 
+            .params__item-key
+                font-size: 14px
+
+            .params__item-value
+                font-size: 14px
+
+    .catalog 
+        .catalog__item 
+            .catalog__item-img
+                img
+                    width: 100% !important
+                    height: auto !important
+
+    .form .checkbox.checkbox_lg label, .form .form__label.form__label_lg
+        font-size: 14px
+
+    .form .form__label.form__label_xl
+        font-size: 18px
+
+    .form .checkbox.checkbox_lg
+        width: 280px
+
+    .form .phone-number
+        font-size: 24px
 // ≥576px
 +media-breakpoint-down(xs)
+    .footer .footer__copyright
+        font-size: 12px
+    .bar
+        padding-left: 20px
+        padding-top: 30px
+        padding-bottom: 30px
+        height: auto
+        flex-direction: column
+        .bar__heading
+            margin-bottom: 1em
+            font-size: 18px
+
     .heading
         &.heading_lg
             font-size: 32px
@@ -133,6 +249,27 @@
         .slick-dots
             margin-left: 0
             left: 15px
+
+    .nums 
+        .nums__item 
+            span
+                font-size: 20px
+    .catalog 
+        .catalog__item 
+            .catalog__item-bottom
+                justify-content: center
+                flex-direction: column
+
+            .catalog-funcs
+                justify-content: center
+                .catalog-funcs__item
+                    margin-left: 5px
+                    margin-right: 5px
+
+            .btn
+                margin-bottom: 1em
+                margin-left: auto
+                margin-right: auto
 /*==========  Mobile First  ==========*/
 
 // ≤576px
