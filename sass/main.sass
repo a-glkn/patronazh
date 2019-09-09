@@ -122,11 +122,15 @@ img
 		.geo-menu__list
 			display: block
 
+.main-wrapper
+	overflow-x: hidden
+
 .header
 	z-index: 100
 	position: relative
 	background-color: #fff
 	box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+	transform: translate3d(0,0,0)
 	.container
 		position: relative
 	.menu-toggler
@@ -510,8 +514,10 @@ img
 		margin-top: 75px
 	.slick-list
 		padding-top: 70px
+	.slick-track
+		display: flex
 	.slick-slide
-		height: auto !important
+		height: inherit !important
 	.slick-arrow
 		&.slick-prev
 			left: -45px
@@ -525,7 +531,7 @@ img
 		margin-right: 12px
 		position: relative
 		padding-top: 90px
-		padding-bottom: 25px
+		padding-bottom: 127px
 		&.feedback-slider__item_no-img
 			padding-top: 25px
 		.feedback-slider__item-img
@@ -558,10 +564,14 @@ img
 			padding-top: 17px
 			color: #666666
 			border-top: 1px solid #eaeaea
-
+			position: absolute
+			bottom: 95px
+			left: 30px
+			width: calc(100% - 60px)
 		.feedback-slider__item-link
-			margin-top: 50px
-			
+			position: absolute
+			bottom: 32px
+			left: 30px
 		&.feedback-slider__item_bd
 			border: 1px solid #eeeeee
 
@@ -576,13 +586,9 @@ img
 		margin-top: 20px
 		
 
-
-
 .news-slider, .news-archive
 	.slick-dots
 		margin-top: 70px
-	.slick-slide
-		height: auto !important
 	&__item
 		margin-left: 12px
 		margin-right: 12px
@@ -647,6 +653,31 @@ img
 		left: 0
 		width: 100%
 	
+
+.news-slider
+	.slick-track
+		display: flex
+	.slick-slide
+		height: inherit !important
+	&__item
+		position: relative
+		padding-bottom: 127px
+		&-date
+			font-size: 12px
+			padding-top: 17px
+			color: #666666
+			border-top: 1px solid #eaeaea
+			position: absolute
+			bottom: 95px
+			left: 0
+			width: 100%
+		&-link
+			position: absolute
+			bottom: 32px
+			left: 0
+
+.link-archive
+	margin-top: -.5em
 
 
 .share
