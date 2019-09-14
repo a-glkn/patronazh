@@ -49,8 +49,16 @@
     a.to-top
         display: none
 
+
+    .services-list
+        &__item
+            &-title
+                font-size: 20px
 // ≥992px
 +media-breakpoint-down(md)
+    .services-list
+        &__item
+            width: 100%
     body
         padding-top: 67px
     .header
@@ -227,6 +235,10 @@
         font-size: 24px
 // ≥576px
 +media-breakpoint-down(xs)
+    .services-list
+        &__item
+            &-title
+                font-size: 18px
     .footer .footer__copyright
         font-size: 12px
     .bar
