@@ -36,6 +36,26 @@ $gutter: $grid-gutter-width
             color: #fff
     &:hover
         background-color: #086799
+
+    &.btn_red
+        background-color: #ff504c
+        color: #fff
+        border: 1px solid #ff504c
+        &:hover
+            opacity: 0.9
+    &.btn_w-auto
+        width: auto
+        padding-left: 3px
+        padding-right: 35px
+
+    &.btn_w-100p
+        width: 100%
+    &.btn_doc
+        background-image: url(../img/doc.png)
+        background-position: 30px center
+        background-repeat: no-repeat
+        padding-left: 65px
+    
 a.btn
     text-decoration: none
     line-height: 41px
@@ -248,6 +268,8 @@ a.btn
         &.highlighted
             &:after
                 width: 73px
+    &.heading_xs
+        font-size: 18px
 
     &.highlighted
         padding-bottom: 0.5em
@@ -262,6 +284,10 @@ a.btn
             left: 0
             background-color: $accent
             
+
+.invert
+    *
+        color: #fff
 
 .section__text
     font-size: 16px
@@ -353,7 +379,10 @@ a.btn
             color: $accent
     span
         color: #219cdc
-
+    &_separate
+        padding-top: 18px
+        padding-bottom: 16px
+        
 .nums
     display: flex
     .nums__item
@@ -594,8 +623,24 @@ hr
             padding-top: 14px
             padding-bottom: 14px
             font-size: 14px
+            small
+                font-size: 10px
             
-
+        &.style-2
+            border: 0
+            tr
+                border-right: 1px solid #f0f7fa
+                border-left: 1px solid #f0f7fa
+            th
+                color: #026698
+                background-color: #f0f7fa
+                border-right: 1px solid #fff
+                border-bottom: 1px solid #fff
+                &:last-child
+                    border-right: 0
+            td
+                border-right: 1px solid #f0f7fa
+                border-bottom: 1px solid #f0f7fa
 
 .inputfile
     width: 0.1px

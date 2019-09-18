@@ -382,6 +382,11 @@ img
 			margin: 2em 0
 			color: #000
 			font-size: 14px
+	&.form_bg
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		padding: 30px 40px
 	.checkbox
 		text-align: left
 		font-size: 14px
@@ -441,10 +446,13 @@ img
 		a
 			color: #000
 			text-decoration: none
+
+
+	
 .cards-list
 	display: flex
 	.cards-list__item
-		padding-left: 30px + 85px
+		padding-left: 30px + 90px
 		padding-right: 30px
 		padding-top: 45px
 		padding-bottom: 45px
@@ -485,11 +493,13 @@ img
 		&:last-child
 			&:after
 				display: none
-		&:hover
-			background-color: #fff
-			&:after
-				display: none
-
+		
+	&:not(.cards-list_no-hover)
+		.cards-list__item
+			&:hover
+				background-color: #fff
+				&:after
+					display: none
 	&.cards-list_bd-top
 		.cards-list__item
 			&:before
@@ -501,6 +511,28 @@ img
 				width: calc(100% - 60px)
 				height: 1px
 				background-color: #cee5f0
+
+	&.cards-list_bd-bot
+		.cards-list__item
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				right: 30px
+				bottom: 0
+				width: calc(100% - 60px)
+				height: 1px
+				background-color: #ebebeb
+	&_two-cols
+		flex-wrap: wrap
+		.cards-list__item
+			flex-basis: 50%
+			&:after
+				display: none
+
+.section_variants
+	.heading_md
+		margin-bottom: 1em
 
 .section_gallery
 	img
@@ -687,6 +719,20 @@ img
 			color: #000000
 			text-decoration: none
 
+.section_form-bg
+	.form
+		color: #000
+		font-size: 18px
+		border-radius: 5px
+		line-height: 1.3333
+		a
+			color: #00669c
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		.heading
+			margin-bottom: 0.5em
+	
 .news-slider
 	.slick-track
 		display: flex
@@ -958,6 +1004,13 @@ img
 		&:hover
 			color: $accent
 
+.section_intro-screen
+	background-repeat: no-repeat
+	background-position: center
+	height: 400px
+	padding-top: 220px
+	background-size: cover
+
 .footer
 	background-color: #f9f9f9
 	padding-top: 65px
@@ -1084,6 +1137,26 @@ img
 		margin-bottom: 20px
 
 
+.section_soc
+	background-image: url(../img/bg-cost.jpg)
+	background-repeat: no-repeat
+	background-position: center left
+	background-size: cover
+	padding-top: 60px
+	padding-bottom: 60px
+	.heading
+		width: 100%
+		border-bottom: 1px solid #d8d8d8
+		line-height: 1.2
+		padding-bottom: 0.5em
+		margin-bottom: 0.5em
+	.text
+		font-size: 18px
+		color: #000000
+
+	.btn
+		margin-top: 2em
+	
 .section_contacts
 	position: relative
 	.phones
