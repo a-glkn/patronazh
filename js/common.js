@@ -29,6 +29,7 @@ $(function() {
 		slidesToScroll: 1,
 		arrows: true,
 		dots: false,
+		infinite: false,
 		responsive: [
 			{
 				breakpoint: 1200,
@@ -41,7 +42,8 @@ $(function() {
 				settings: {
 					slidesToShow: 1,
 					arrows: false,
-					dots: true
+					dots: true,
+					infinite: true
 				}
 			}
 		]
