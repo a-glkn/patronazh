@@ -598,7 +598,7 @@ a.btn
     border-radius: 4px
     background-color: #fff
     padding-bottom: 30px
-    transition: .3s ease
+    transition: .3s ease box-shadow
     &__img
         border-top-left-radius: 4px
         border-top-right-radius: 4px
@@ -666,19 +666,33 @@ a.btn
         .btn
             width: 50%
     &:hover
-        box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.11)
+        box-shadow: 0px 7px 49px 0px rgba(0, 0, 0, 0.11)
+
+.pension_slider-wrapper
+    width: calc(100% + 100px)
+    padding: 0 50px
+    margin-left: -50px
+    margin-right: -50px
+    overflow: hidden
 
 .pension_slider
+    .slick-slide
+        opacity: 0
+        &.slick-active
+            opacity: 1
+        
     .slick-list
         padding-top: 10px
-        padding-bottom: 20px
+        padding-bottom: 50px
+        overflow: visible
     &__item
         padding-left: 12.5px
         padding-right: 12.5px
         transition: .3s ease
+        position: relative
         &:hover
+            z-index: 10
             transform: translateY(-10px) 
-
 
     .slick-track
         display: flex
@@ -686,8 +700,6 @@ a.btn
             height: auto
             > div
                 height: 100%
-
-    
     .slick-arrow
         cursor: pointer
         width: 40px
@@ -704,7 +716,8 @@ a.btn
         transition: .3s ease
         background-color: #ffffff
         border-radius: 50%
-        box-shadow: 0px 7px 49px 0px rgba(0, 0, 0, 0.11)
+        cursor: pointer
+        box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.11)
         &:before
             content: ''
             display: block
@@ -741,6 +754,9 @@ a.btn
         &:hover
             opacity: .8
 
+        &.slick-disabled
+            opacity: 0.5
+            cursor: default
 .params
     .params__item
         display: flex
