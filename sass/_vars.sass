@@ -13,6 +13,13 @@ $gutter: $grid-gutter-width
 .bg-grey
     background-color: #f3f3f3
 
+.bg-white
+    background-color: #fff
+
+.bg-cover
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
 
 .btn
     width: 170px
@@ -47,7 +54,6 @@ $gutter: $grid-gutter-width
         width: auto
         padding-left: 3px
         padding-right: 35px
-
     &.btn_w-100p
         width: 100%
     &.btn_doc
@@ -55,7 +61,33 @@ $gutter: $grid-gutter-width
         background-position: 30px center
         background-repeat: no-repeat
         padding-left: 65px
-    
+    &.btn_tall
+        height: 51px
+
+    &.btn_coat-of-arms
+        position: relative
+        overflow: hidden
+        .icon
+            position: absolute
+            width: 100px
+            left: 50%
+            margin-left: -50px
+            fill: white
+            height: 100px
+            top: 50%
+            margin-top: -40px
+            opacity: 0.25
+
+    &.btn_grey
+        background-color: #f3f3f3
+        color: #010101
+        font-size: 14px
+        border-color: #f3f3f3
+        &:hover
+            background-color: #fff
+            border-color: #219cdc
+            color: #219cdc
+
 a.btn
     text-decoration: none
     line-height: 41px
@@ -63,6 +95,9 @@ a.btn
     display: inline-block
     &:hover
         color: #fff
+
+    &.btn_tall
+        line-height: 51px
 
 .btn_zoom
     display: flex
@@ -94,6 +129,10 @@ a.btn
 
 .text-grey
     color: #666666
+
+.section
+    .text
+        font-size: 18px
 
 .visual-adjustment
     a
@@ -262,6 +301,10 @@ a.btn
         &.highlighted
             &:after
                 width: 170px
+    
+    &.heading_md-sm
+        font-size: 30px
+        line-height: 1.2
 
     &.heading_sm
         font-size: 24px
@@ -278,7 +321,6 @@ a.btn
             content: ''
             display: block
             height: 1px
-            
             position: absolute
             bottom: 0
             left: 0
@@ -296,6 +338,8 @@ a.btn
         font-size: 16px
         line-height: 1.5
         margin: 1em 0
+        &.lg
+            font-size: 18px
 
 .slick-arrow
     width: 17px
@@ -514,6 +558,188 @@ a.btn
     padding-bottom: 25px
     padding-top: 10px
     border-radius: 5px
+
+.features-list
+    &__item
+        display: flex
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+        &-icon
+            width: 51px
+            height: 51px
+            min-width: 51px
+            min-height: 51px
+            background-color: #f3f3f3
+            border-radius: 50%
+            display: flex
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: 25px
+            position: relative
+            svg
+                margin: auto
+                width: 32px
+                height: auto
+                max-height: 32px
+                fill: #aa9882
+                position: relative
+
+        &-title
+            display: flex
+            font-size: 16px
+            color: #000
+            line-height: 1.25
+            margin-top: auto
+            margin-bottom: auto
+
+
+.pension-card
+    border-radius: 4px
+    background-color: #fff
+    padding-bottom: 30px
+    transition: .3s ease
+    &__img
+        border-top-left-radius: 4px
+        border-top-right-radius: 4px
+        overflow: hidden
+        position: relative
+        img
+            width: 100%
+            height: auto
+        &-overlay
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            background: linear-gradient(180deg, rgba(243,243,243, 0) 0%, rgba(255,255,255,1) 100%)
+    &__inner
+        padding-left: 20px
+        padding-right: 20px
+        margin-top: -2em
+        position: relative
+        z-index: 1
+    &__heading
+        color: #000
+        font-size: 22px
+        font-weight: 500
+        line-height: 1
+    &__address
+        font-size: 16px
+        color: #000
+        margin-top: 1em
+        line-height: 1.5
+        padding-top: 1em
+        padding-bottom: 1em
+        border-top: 1px solid #f3f3f3
+        border-bottom: 1px solid #f3f3f3
+    .features-list
+        margin-top: 28px
+        margin-bottom: 28px
+
+    &__price
+        display: flex
+        padding-top: 1em
+        padding-bottom: 1em
+        border-top: 1px solid #f3f3f3
+        border-bottom: 1px solid #f3f3f3
+        justify-content: space-between
+        &-heading
+            font-size: 16px
+            color: #000
+            margin-top: auto
+            margin-bottom: auto
+            line-height: 1
+        &-sum
+            font-size: 20px
+            color: #219cdc
+            font-weight: 500
+            margin-top: auto
+            margin-bottom: auto
+            line-height: 1
+            white-space: nowrap
+    &__btns
+        background-color: #f3f3f3
+        display: flex
+        margin-top: 28px
+        .btn
+            width: 50%
+    &:hover
+        box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.11)
+
+.pension_slider
+    .slick-list
+        padding-top: 10px
+        padding-bottom: 20px
+    &__item
+        padding-left: 12.5px
+        padding-right: 12.5px
+        transition: .3s ease
+        &:hover
+            transform: translateY(-10px) 
+
+
+    .slick-track
+        display: flex
+        .slick-slide
+            height: auto
+            > div
+                height: 100%
+
+    
+    .slick-arrow
+        cursor: pointer
+        width: 40px
+        height: 40px
+        text-indent: -9999px
+        display: inline-block
+        position: absolute
+        top: 50%
+        z-index: 10
+        border: 0
+        margin-top: -21px
+        outline: none
+        background: transparent
+        transition: .3s ease
+        background-color: #ffffff
+        border-radius: 50%
+        box-shadow: 0px 7px 49px 0px rgba(0, 0, 0, 0.11)
+        &:before
+            content: ''
+            display: block
+            width: 1px
+            height: 15px
+            position: absolute
+            top: 7.5px
+            background-color: #d1d1d1
+        &:after
+            content: ''
+            display: block
+            width: 1px
+            height: 15px
+            position: absolute
+            bottom: 7.5px
+            background-color: #d1d1d1
+        &.slick-prev
+            left: -45px
+            &:before
+                left: 18px
+                transform: rotate(45deg)
+            &:after
+                left: 18px
+                transform: rotate(-45deg)
+        &.slick-next
+            right: -45px
+            transform: rotate(0deg)
+            &:before
+                right: 18px
+                transform: rotate(-45deg)
+            &:after
+                right: 18px
+                transform: rotate(45deg)
+        &:hover
+            opacity: .8
 
 .params
     .params__item
