@@ -23,6 +23,30 @@ $(function() {
 		]
 	});
 
+
+	$('.pension_slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					dots: true
+				}
+			}
+		]
+	});
+
 	$('.news-slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
