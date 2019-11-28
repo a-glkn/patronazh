@@ -597,8 +597,10 @@ a.btn
 .pension-card
     border-radius: 4px
     background-color: #fff
-    padding-bottom: 30px
     transition: .3s ease box-shadow
+    display: flex
+    flex-direction: column
+    
     &__img
         border-top-left-radius: 4px
         border-top-right-radius: 4px
@@ -617,15 +619,20 @@ a.btn
     &__inner
         padding-left: 20px
         padding-right: 20px
-        margin-top: -2em
         position: relative
         z-index: 1
         padding-bottom: 123px
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        position: relative
+        top: -30px
     &__heading
         color: #000
         font-size: 22px
         font-weight: 500
         line-height: 1
+        // margin-top: 40px
     &__address
         font-size: 16px
         color: #000
