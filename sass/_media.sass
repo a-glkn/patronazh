@@ -56,6 +56,9 @@
                 font-size: 20px
 // ≥992px
 +media-breakpoint-down(md)
+    .promo-intro
+        &:after
+            background: linear-gradient(270deg, rgba(249,249,249,.2) 0%, rgba(249,249,249,1) 100%)
     .section__text
         p.lg
             font-size: 16px
@@ -85,6 +88,18 @@
         .mobile-menu
             display: block
 
+    .form
+        &.form_sub
+            .btn
+                margin-top: 20px
+            .form__input
+                margin-top: 20px
+
+        &.form_bd-wrapper
+            .btn
+                margin-top: 20px
+            .form__input
+                margin-top: 20px
 
     .heading
         &.heading_lg

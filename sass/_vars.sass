@@ -21,16 +21,19 @@ $gutter: $grid-gutter-width
     background-position: center
     background-size: cover
 
+.text-accent
+    color: $accent !important
+
 .btn
     width: 170px
     height: 41px
     color: #fff
-    background-color: #219cdc
+    background-color: $accent
     border-radius: 4px
     border: 0
     transition: .3s ease
     cursor: pointer
-    border: 1px solid #219cdc
+    border: 1px solid $accent
     &.btn_bd
         background-color: #f9f9f9
         border-color: #eeeeee
@@ -85,8 +88,8 @@ $gutter: $grid-gutter-width
         border-color: #f3f3f3
         &:hover
             background-color: #fff
-            border-color: #219cdc
-            color: #219cdc
+            border-color: $accent
+            color: $accent
 
 a.btn
     text-decoration: none
@@ -108,7 +111,7 @@ a.btn
         height: 41px
     span
         margin-left: 10px
-        color: #219cdc
+        color: $accent
         font-size: 12px
         margin-top: auto
         margin-bottom: auto
@@ -325,6 +328,10 @@ a.btn
             bottom: 0
             left: 0
             background-color: $accent
+
+    &.heading_bd-bottom
+        padding-bottom: 1em
+        border-bottom: 1px solid #eaeaea
             
 
 .invert
@@ -422,7 +429,7 @@ a.btn
         &:hover
             color: $accent
     span
-        color: #219cdc
+        color: $accent
     &_separate
         padding-top: 18px
         padding-bottom: 16px
@@ -452,7 +459,7 @@ a.btn
             margin-bottom: 7px
         span
             font-size: 26px
-            color: #219cdc
+            color: $accent
             display: block
             margin-bottom: 4px
         &:last-child
@@ -665,7 +672,7 @@ a.btn
             line-height: 1
         &-sum
             font-size: 20px
-            color: #219cdc
+            color: $accent
             font-weight: 500
             margin-top: auto
             margin-bottom: auto
@@ -796,7 +803,7 @@ a.btn
         .params__item-value
             font-size: 16px
             width: 50%
-            color: #219cdc
+            color: $accent
             padding-left: 25px
             padding-top: 5px
             padding-bottom: 5px
@@ -865,7 +872,7 @@ hr
         border-radius: 5px
         overflow: hidden
         th
-            background-color: #219cdc
+            background-color: $accent
             color: #fff
             border-right: 1px solid #eeeeee
             border-bottom: 1px solid #eeeeee
@@ -912,7 +919,7 @@ hr
 .inputfile + label
     max-width: 80%
     font-size: 12px
-    color: #219cdc !important
+    color: $accent !important
     text-overflow: ellipsis
     white-space: nowrap
     cursor: pointer
@@ -940,3 +947,36 @@ hr
 
     svg
         margin-right: 10px
+
+
+
+.promo-intro
+    padding-top: 150px
+    padding-bottom: 25px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    border-radius: 4px
+    overflow: hidden
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: block
+        background: linear-gradient(270deg, rgba(249,249,249,1) 0%, rgba(249,249,249,0) 100%)
+    .container
+        position: relative
+        z-index: 2
+    .heading
+        margin-bottom: 0.5em
+    &__sub
+        font-size: 16px
+        margin-bottom: 0.5em
+        color: $accent
+    &__text
+        font-size: 16px
+        color: #666666

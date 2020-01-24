@@ -25,10 +25,7 @@ body
 	input, textarea
 		border: #666 1px solid
 		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+
 
 .img-responsive
 	display: block
@@ -447,6 +444,32 @@ img
 			color: #000
 			text-decoration: none
 
+	&.form_sub
+		border: 1px solid #eeeeee
+		border-radius: 4px
+		padding-top: 20px
+		padding-bottom: 20px
+		padding-left: 20px
+		padding-right: 20px
+		.form__input
+			margin-bottom: 0
+		.btn
+			margin-bottom: 0
+
+	&.form_bd-wrapper
+		border: 1px solid #eeeeee
+		border-radius: 4px
+		padding-top: 30px
+		padding-bottom: 30px
+		padding-left: 20px
+		padding-right: 20px
+		.form__input
+			margin-bottom: 0
+		.btn
+			margin-bottom: 0
+
+		.checkbox
+			margin-bottom: 0
 
 	
 .cards-list
@@ -810,7 +833,12 @@ img
 		border-radius: 6px
 		margin-bottom: 30px
 		transition: .3s ease
-		
+		&-term
+			font-size: 14px
+			color: $accent
+			padding-left: 30px
+			padding-right: 30px
+			margin-top: 0.5em
 		&-text
 			padding-left: 30px
 			padding-right: 30px
@@ -826,6 +854,30 @@ img
 		
 		&:hover
 			box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+
+	&_promos
+		.news-archive__item
+			&-text
+				position: relative
+				padding-bottom: 1em
+				margin-top: 1em
+				&:after
+					content: ''
+					display: block
+					bottom: 0
+					position: absolute
+					left: 30px
+					width: calc(100% - 60px)
+					height: 1px
+					background-color: #eaeaea
+			&-heading
+				font-size: 18px
+				color: #000
+				&:after
+					display: none
+
+			&-link
+				margin-top: 3em
 
 .date
 	font-size: 12px
@@ -890,6 +942,51 @@ img
 		font-size: 16px
 		list-style-position: inside
 	
+	.list
+		font-size: 16px
+		color: #666666
+		margin: 1em 0
+		&.list_circle
+			list-style: none
+			counter-reset: my-awesome-counter
+			li
+				counter-increment: my-awesome-counter
+				position: relative
+				padding-left: 40px
+				margin: 2em 0
+				&:before
+					content: counter(my-awesome-counter)
+					width: 30px
+					height: 30px
+					position: absolute
+					top: 50%
+					left: 0
+					margin-top: -15px
+					border: 1px solid #d1e3ee
+					border-radius: 50%
+					display: inline-block
+					font-size: 14px
+					color: #8ab4cf
+					text-align: center
+					line-height: 30px
+				
+		&.list_round
+			li
+				list-style: none
+				padding-left: 25px
+				position: relative
+				margin: 1em 0
+				&:before
+					width: 12px
+					height: 12px
+					content: ''
+					display: block
+					border: 1px solid $accent
+					border-radius: 50%
+					left: 0
+					top: 2px
+					position: absolute
+
 
 .section_news_archive
 	.breadcrumbs
