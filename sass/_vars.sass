@@ -13,17 +13,27 @@ $gutter: $grid-gutter-width
 .bg-grey
     background-color: #f3f3f3
 
+.bg-white
+    background-color: #fff
+
+.bg-cover
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+.text-accent
+    color: $accent !important
 
 .btn
     width: 170px
     height: 41px
     color: #fff
-    background-color: #219cdc
+    background-color: $accent
     border-radius: 4px
     border: 0
     transition: .3s ease
     cursor: pointer
-    border: 1px solid #219cdc
+    border: 1px solid $accent
     &.btn_bd
         background-color: #f9f9f9
         border-color: #eeeeee
@@ -36,6 +46,51 @@ $gutter: $grid-gutter-width
             color: #fff
     &:hover
         background-color: #086799
+
+    &.btn_red
+        background-color: #ff504c
+        color: #fff
+        border: 1px solid #ff504c
+        &:hover
+            opacity: 0.9
+    &.btn_w-auto
+        width: auto
+        padding-left: 3px
+        padding-right: 35px
+    &.btn_w-100p
+        width: 100%
+    &.btn_doc
+        background-image: url(../img/doc.png)
+        background-position: 30px center
+        background-repeat: no-repeat
+        padding-left: 65px
+    &.btn_tall
+        height: 51px
+
+    &.btn_coat-of-arms
+        position: relative
+        overflow: hidden
+        .icon
+            position: absolute
+            width: 100px
+            left: 50%
+            margin-left: -50px
+            fill: white
+            height: 100px
+            top: 50%
+            margin-top: -40px
+            opacity: 0.25
+
+    &.btn_grey
+        background-color: #f3f3f3
+        color: #010101
+        font-size: 14px
+        border-color: #f3f3f3
+        &:hover
+            background-color: #fff
+            border-color: $accent
+            color: $accent
+
 a.btn
     text-decoration: none
     line-height: 41px
@@ -43,6 +98,9 @@ a.btn
     display: inline-block
     &:hover
         color: #fff
+
+    &.btn_tall
+        line-height: 51px
 
 .btn_zoom
     display: flex
@@ -53,7 +111,7 @@ a.btn
         height: 41px
     span
         margin-left: 10px
-        color: #219cdc
+        color: $accent
         font-size: 12px
         margin-top: auto
         margin-bottom: auto
@@ -74,6 +132,10 @@ a.btn
 
 .text-grey
     color: #666666
+
+.section
+    .text
+        font-size: 18px
 
 .visual-adjustment
     a
@@ -242,12 +304,18 @@ a.btn
         &.highlighted
             &:after
                 width: 170px
+    
+    &.heading_md-sm
+        font-size: 30px
+        line-height: 1.2
 
     &.heading_sm
         font-size: 24px
         &.highlighted
             &:after
                 width: 73px
+    &.heading_xs
+        font-size: 18px
 
     &.highlighted
         padding-bottom: 0.5em
@@ -256,12 +324,19 @@ a.btn
             content: ''
             display: block
             height: 1px
-            
             position: absolute
             bottom: 0
             left: 0
             background-color: $accent
+
+    &.heading_bd-bottom
+        padding-bottom: 1em
+        border-bottom: 1px solid #eaeaea
             
+
+.invert
+    *
+        color: #fff
 
 .section__text
     font-size: 16px
@@ -270,6 +345,8 @@ a.btn
         font-size: 16px
         line-height: 1.5
         margin: 1em 0
+        &.lg
+            font-size: 18px
 
 .slick-arrow
     width: 17px
@@ -352,8 +429,11 @@ a.btn
         &:hover
             color: $accent
     span
-        color: #219cdc
-
+        color: $accent
+    &_separate
+        padding-top: 18px
+        padding-bottom: 16px
+        
 .nums
     display: flex
     .nums__item
@@ -379,7 +459,7 @@ a.btn
             margin-bottom: 7px
         span
             font-size: 26px
-            color: #219cdc
+            color: $accent
             display: block
             margin-bottom: 4px
         &:last-child
@@ -486,6 +566,220 @@ a.btn
     padding-top: 10px
     border-radius: 5px
 
+.features-list
+    &__item
+        display: flex
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+        &-icon
+            width: 51px
+            height: 51px
+            min-width: 51px
+            min-height: 51px
+            background-color: #f3f3f3
+            border-radius: 50%
+            display: flex
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: 25px
+            position: relative
+            svg
+                margin: auto
+                width: 32px
+                height: auto
+                max-height: 32px
+                fill: #aa9882
+                position: relative
+
+        &-title
+            display: flex
+            font-size: 16px
+            color: #000
+            line-height: 1.25
+            margin-top: auto
+            margin-bottom: auto
+
+
+.pension-card
+    border-radius: 4px
+    background-color: #fff
+    transition: .3s ease box-shadow
+    display: flex
+    flex-direction: column
+    
+    &__img
+        border-top-left-radius: 4px
+        border-top-right-radius: 4px
+        overflow: hidden
+        position: relative
+        img
+            width: 100%
+            height: auto
+        &-overlay
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            background: linear-gradient(180deg, rgba(243,243,243, 0) 0%, rgba(255,255,255,1) 100%)
+    &__inner
+        padding-left: 20px
+        padding-right: 20px
+        position: relative
+        z-index: 1
+        padding-bottom: 123px
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        position: relative
+        top: -30px
+    &__heading
+        color: #000
+        font-size: 22px
+        font-weight: 500
+        line-height: 1
+        // margin-top: 40px
+    &__address
+        font-size: 16px
+        color: #000
+        margin-top: 1em
+        line-height: 1.5
+        padding-top: 1em
+        padding-bottom: 1em
+        border-top: 1px solid #f3f3f3
+        border-bottom: 1px solid #f3f3f3
+    .features-list
+        margin-top: 28px
+        margin-bottom: 28px
+
+    &__price
+        display: flex
+        padding-top: 1em
+        padding-bottom: 1em
+        border-top: 1px solid #f3f3f3
+        border-bottom: 1px solid #f3f3f3
+        justify-content: space-between
+        position: absolute
+        bottom: 69px
+        left: 20px
+        width: calc(100% - 40px)
+        &-heading
+            font-size: 16px
+            color: #000
+            margin-top: auto
+            margin-bottom: auto
+            line-height: 1
+        &-sum
+            font-size: 20px
+            color: $accent
+            font-weight: 500
+            margin-top: auto
+            margin-bottom: auto
+            line-height: 1
+            white-space: nowrap
+    &__btns
+        background-color: #f3f3f3
+        display: flex
+        margin-top: 28px
+        position: absolute
+        bottom: 0
+        left: 20px
+        width: calc(100% - 40px)
+        .btn
+            width: 50%
+    &:hover
+        box-shadow: 0px 7px 49px 0px rgba(0, 0, 0, 0.11)
+
+.pension_slider-wrapper
+    width: calc(100% + 100px)
+    padding: 0 50px
+    margin-left: -50px
+    margin-right: -50px
+    overflow: hidden
+
+.pension_slider
+    .slick-slide
+        opacity: 0
+        &.slick-active
+            opacity: 1
+        
+    .slick-list
+        padding-top: 10px
+        padding-bottom: 50px
+        overflow: visible
+    &__item
+        padding-left: 12.5px
+        padding-right: 12.5px
+        transition: .3s ease
+        position: relative
+        &:hover
+            z-index: 10
+            transform: translateY(-10px) 
+
+    .slick-track
+        display: flex
+        .slick-slide
+            height: auto
+            > div
+                height: 100%
+    .slick-arrow
+        cursor: pointer
+        width: 40px
+        height: 40px
+        text-indent: -9999px
+        display: inline-block
+        position: absolute
+        top: 50%
+        z-index: 10
+        border: 0
+        margin-top: -21px
+        outline: none
+        background: transparent
+        transition: .3s ease
+        background-color: #ffffff
+        border-radius: 50%
+        cursor: pointer
+        box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.11)
+        &:before
+            content: ''
+            display: block
+            width: 1px
+            height: 15px
+            position: absolute
+            top: 7.5px
+            background-color: #d1d1d1
+        &:after
+            content: ''
+            display: block
+            width: 1px
+            height: 15px
+            position: absolute
+            bottom: 7.5px
+            background-color: #d1d1d1
+        &.slick-prev
+            left: -45px
+            &:before
+                left: 18px
+                transform: rotate(45deg)
+            &:after
+                left: 18px
+                transform: rotate(-45deg)
+        &.slick-next
+            right: -45px
+            transform: rotate(0deg)
+            &:before
+                right: 18px
+                transform: rotate(-45deg)
+            &:after
+                right: 18px
+                transform: rotate(45deg)
+        &:hover
+            opacity: .8
+
+        &.slick-disabled
+            opacity: 0.5
+            cursor: default
 .params
     .params__item
         display: flex
@@ -509,7 +803,7 @@ a.btn
         .params__item-value
             font-size: 16px
             width: 50%
-            color: #219cdc
+            color: $accent
             padding-left: 25px
             padding-top: 5px
             padding-bottom: 5px
@@ -578,7 +872,7 @@ hr
         border-radius: 5px
         overflow: hidden
         th
-            background-color: #219cdc
+            background-color: $accent
             color: #fff
             border-right: 1px solid #eeeeee
             border-bottom: 1px solid #eeeeee
@@ -594,8 +888,24 @@ hr
             padding-top: 14px
             padding-bottom: 14px
             font-size: 14px
+            small
+                font-size: 10px
             
-
+        &.style-2
+            border: 0
+            tr
+                border-right: 1px solid #f0f7fa
+                border-left: 1px solid #f0f7fa
+            th
+                color: #026698
+                background-color: #f0f7fa
+                border-right: 1px solid #fff
+                border-bottom: 1px solid #fff
+                &:last-child
+                    border-right: 0
+            td
+                border-right: 1px solid #f0f7fa
+                border-bottom: 1px solid #f0f7fa
 
 .inputfile
     width: 0.1px
@@ -609,7 +919,7 @@ hr
 .inputfile + label
     max-width: 80%
     font-size: 12px
-    color: #219cdc !important
+    color: $accent !important
     text-overflow: ellipsis
     white-space: nowrap
     cursor: pointer
@@ -637,3 +947,36 @@ hr
 
     svg
         margin-right: 10px
+
+
+
+.promo-intro
+    padding-top: 150px
+    padding-bottom: 25px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    border-radius: 4px
+    overflow: hidden
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: block
+        background: linear-gradient(270deg, rgba(249,249,249,1) 0%, rgba(249,249,249,0) 100%)
+    .container
+        position: relative
+        z-index: 2
+    .heading
+        margin-bottom: 0.5em
+    &__sub
+        font-size: 16px
+        margin-bottom: 0.5em
+        color: $accent
+    &__text
+        font-size: 16px
+        color: #666666

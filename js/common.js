@@ -14,10 +14,36 @@ $(function() {
 				}
 			},
 			{
-				breakpoint: 576,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					arrows: false
+				}
+			}
+		]
+	});
+
+
+	$('.pension_slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					dots: true,
+					infinite: true
 				}
 			}
 		]
@@ -36,7 +62,7 @@ $(function() {
 				}
 			},
 			{
-				breakpoint: 576,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					arrows: false
