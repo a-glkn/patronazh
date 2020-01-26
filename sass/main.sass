@@ -856,20 +856,22 @@ img
 			box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
 
 	&_promos
+		overflow: hidden
+		.column
+			display: flex
+			margin-bottom: 30px
+			flex-direction: column
 		.news-archive__item
+			position: relative
+			height: 100%
+			padding-bottom: 100px
+			margin-bottom: 0
 			&-text
 				position: relative
 				padding-bottom: 1em
 				margin-top: 1em
 				&:after
-					content: ''
-					display: block
-					bottom: 0
-					position: absolute
-					left: 30px
-					width: calc(100% - 60px)
-					height: 1px
-					background-color: #eaeaea
+					display: none
 			&-heading
 				font-size: 18px
 				color: #000
@@ -877,7 +879,24 @@ img
 					display: none
 
 			&-link
-				margin-top: 3em
+				margin-left: 0
+				margin-top: 0
+				&-block
+					position: absolute
+					left: 0
+					bottom: 25px
+					width: 100%
+					padding-left: 30px
+					padding-right: 30px
+					&:after
+						content: ''
+						display: block
+						top: -55px
+						position: absolute
+						left: 30px
+						width: calc(100% - 60px)
+						height: 1px
+						background-color: #eaeaea
 
 .date
 	font-size: 12px
