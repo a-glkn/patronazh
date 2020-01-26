@@ -472,6 +472,36 @@ img
 			margin-bottom: 0
 
 	
+.num-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	&__item
+		width: calc(50% - 15px)
+		padding-left: 96px
+		position: relative
+		min-height: 70px
+		display: flex
+		margin-bottom: 40px
+		&-text
+			margin-top: auto
+			margin-bottom: auto
+		&-num
+			position: absolute
+			left: 0
+			border: 2px solid #f6f6f6
+			top: 0
+			width: 70px
+			height: 70px
+			max-width: 70px
+			min-width: 70px
+			text-align: center
+			font-size: 32px
+			line-height: 1.22222
+			color: #219cdc
+			line-height: 70px
+			border-radius: 50%
+
 .cards-list
 	display: flex
 	.cards-list__item
@@ -1229,6 +1259,10 @@ img
 	justify-content: space-between
 	padding-left: 40px
 	padding-right: 20px
+	p
+		font-size: 16px
+	.heading
+		margin-bottom: 1em
 	.bar__heading
 		font-size: 36px
 		color: #000000
@@ -1239,6 +1273,14 @@ img
 	.btn
 		margin-top: auto
 		margin-bottom: auto
+
+	&.bar_w-100p
+		display: block
+		height: auto
+		padding-left: 0
+		padding-right: 0
+		padding-top: 30px
+		padding-bottom: 30px
 
 .side-menu
 	border: 1px solid #efefef
