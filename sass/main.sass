@@ -25,10 +25,7 @@ body
 	input, textarea
 		border: #666 1px solid
 		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+
 
 .img-responsive
 	display: block
@@ -122,11 +119,15 @@ img
 		.geo-menu__list
 			display: block
 
+.main-wrapper
+	overflow-x: hidden
+
 .header
 	z-index: 100
 	position: relative
 	background-color: #fff
 	box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+	transform: translate3d(0,0,0)
 	.container
 		position: relative
 	.menu-toggler
@@ -378,6 +379,11 @@ img
 			margin: 2em 0
 			color: #000
 			font-size: 14px
+	&.form_bg
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		padding: 30px 40px
 	.checkbox
 		text-align: left
 		font-size: 14px
@@ -437,10 +443,69 @@ img
 		a
 			color: #000
 			text-decoration: none
+
+	&.form_sub
+		border: 1px solid #eeeeee
+		border-radius: 4px
+		padding-top: 20px
+		padding-bottom: 20px
+		padding-left: 20px
+		padding-right: 20px
+		.form__input
+			margin-bottom: 0
+		.btn
+			margin-bottom: 0
+
+	&.form_bd-wrapper
+		border: 1px solid #eeeeee
+		border-radius: 4px
+		padding-top: 30px
+		padding-bottom: 30px
+		padding-left: 20px
+		padding-right: 20px
+		.form__input
+			margin-bottom: 0
+		.btn
+			margin-bottom: 0
+
+		.checkbox
+			margin-bottom: 0
+
+	
+.num-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	&__item
+		width: calc(50% - 15px)
+		padding-left: 96px
+		position: relative
+		min-height: 70px
+		display: flex
+		margin-bottom: 40px
+		&-text
+			margin-top: auto
+			margin-bottom: auto
+		&-num
+			position: absolute
+			left: 0
+			border: 2px solid #f6f6f6
+			top: 0
+			width: 70px
+			height: 70px
+			max-width: 70px
+			min-width: 70px
+			text-align: center
+			font-size: 32px
+			line-height: 1.22222
+			color: #219cdc
+			line-height: 70px
+			border-radius: 50%
+
 .cards-list
 	display: flex
 	.cards-list__item
-		padding-left: 30px + 85px
+		padding-left: 30px + 90px
 		padding-right: 30px
 		padding-top: 45px
 		padding-bottom: 45px
@@ -481,11 +546,14 @@ img
 		&:last-child
 			&:after
 				display: none
-		&:hover
-			background-color: #fff
-			&:after
-				display: none
-
+		
+	&:not(.cards-list_no-hover)
+		.cards-list__item
+			&:hover
+				background-color: #fff
+				box-shadow: 0px 7px 30px 0px rgba(0, 0, 0, 0.11)
+				&:after
+					display: none
 	&.cards-list_bd-top
 		.cards-list__item
 			&:before
@@ -497,6 +565,28 @@ img
 				width: calc(100% - 60px)
 				height: 1px
 				background-color: #cee5f0
+
+	&.cards-list_bd-bot
+		.cards-list__item
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				right: 30px
+				bottom: 0
+				width: calc(100% - 60px)
+				height: 1px
+				background-color: #ebebeb
+	&_two-cols
+		flex-wrap: wrap
+		.cards-list__item
+			flex-basis: 50%
+			&:after
+				display: none
+
+.section_variants
+	.heading_md
+		margin-bottom: 1em
 
 .section_gallery
 	img
@@ -510,6 +600,10 @@ img
 		margin-top: 75px
 	.slick-list
 		padding-top: 70px
+	.slick-track
+		display: flex
+	.slick-slide
+		height: inherit !important
 	.slick-arrow
 		&.slick-prev
 			left: -45px
@@ -523,7 +617,7 @@ img
 		margin-right: 12px
 		position: relative
 		padding-top: 90px
-		padding-bottom: 25px
+		padding-bottom: 127px
 		&.feedback-slider__item_no-img
 			padding-top: 25px
 		.feedback-slider__item-img
@@ -556,10 +650,14 @@ img
 			padding-top: 17px
 			color: #666666
 			border-top: 1px solid #eaeaea
-
+			position: absolute
+			bottom: 95px
+			left: 30px
+			width: calc(100% - 60px)
 		.feedback-slider__item-link
-			margin-top: 50px
-			
+			position: absolute
+			bottom: 32px
+			left: 30px
 		&.feedback-slider__item_bd
 			border: 1px solid #eeeeee
 
@@ -573,8 +671,9 @@ img
 	.feedback-slider
 		margin-top: 20px
 		
-
-
+.section_pensions
+	.pension_slider
+		margin-top: 40px
 
 .news-slider, .news-archive
 	.slick-dots
@@ -636,6 +735,87 @@ img
 		&-link
 			margin-top: 2em
 
+.news-slider__item-heading
+	padding-left: 0
+	padding-right: 0
+	&:after
+		left: 0
+		width: 100%
+	
+.section_services
+	.breadcrumbs
+		margin-bottom: 30px
+
+.services-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	&__item
+		width: calc(50% - 12px)
+		height: 200px
+		background-repeat: no-repeat
+		background-position: center right
+		background-size: cover
+		border-radius: 4px
+		margin-bottom: 24px
+		padding-left: 20px
+		padding-top: 74px
+		padding-right: 20px
+		text-decoration: none !important
+		transition: .3s ease
+		&:hover
+			box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+		&-icon
+			svg
+				max-width: 58px
+				width: auto
+				height: 55px
+		&-title
+			margin-top: 0.5em
+			font-size: 22px
+			color: #000000
+			text-decoration: none
+
+.section_form-bg
+	.form
+		color: #000
+		font-size: 18px
+		border-radius: 5px
+		line-height: 1.3333
+		a
+			color: #00669c
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		.heading
+			margin-bottom: 0.5em
+	
+.news-slider
+	.slick-track
+		display: flex
+	.slick-slide
+		height: inherit !important
+	&__item
+		position: relative
+		padding-bottom: 127px
+		&-date
+			font-size: 12px
+			padding-top: 17px
+			color: #666666
+			border-top: 1px solid #eaeaea
+			position: absolute
+			bottom: 95px
+			left: 0
+			width: 100%
+		&-link
+			position: absolute
+			bottom: 32px
+			left: 0
+
+.link-archive
+	margin-top: -.5em
+
+
 .share
 	display: flex
 	span
@@ -683,7 +863,12 @@ img
 		border-radius: 6px
 		margin-bottom: 30px
 		transition: .3s ease
-		
+		&-term
+			font-size: 14px
+			color: $accent
+			padding-left: 30px
+			padding-right: 30px
+			margin-top: 0.5em
 		&-text
 			padding-left: 30px
 			padding-right: 30px
@@ -699,6 +884,49 @@ img
 		
 		&:hover
 			box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.04)
+
+	&_promos
+		overflow: hidden
+		.column
+			display: flex
+			margin-bottom: 30px
+			flex-direction: column
+		.news-archive__item
+			position: relative
+			height: 100%
+			padding-bottom: 100px
+			margin-bottom: 0
+			&-text
+				position: relative
+				padding-bottom: 1em
+				margin-top: 1em
+				&:after
+					display: none
+			&-heading
+				font-size: 18px
+				color: #000
+				&:after
+					display: none
+
+			&-link
+				margin-left: 0
+				margin-top: 0
+				&-block
+					position: absolute
+					left: 0
+					bottom: 25px
+					width: 100%
+					padding-left: 30px
+					padding-right: 30px
+					&:after
+						content: ''
+						display: block
+						top: -55px
+						position: absolute
+						left: 30px
+						width: calc(100% - 60px)
+						height: 1px
+						background-color: #eaeaea
 
 .date
 	font-size: 12px
@@ -763,6 +991,51 @@ img
 		font-size: 16px
 		list-style-position: inside
 	
+	.list
+		font-size: 16px
+		color: #666666
+		margin: 1em 0
+		&.list_circle
+			list-style: none
+			counter-reset: my-awesome-counter
+			li
+				counter-increment: my-awesome-counter
+				position: relative
+				padding-left: 40px
+				margin: 2em 0
+				&:before
+					content: counter(my-awesome-counter)
+					width: 30px
+					height: 30px
+					position: absolute
+					top: 50%
+					left: 0
+					margin-top: -15px
+					border: 1px solid #d1e3ee
+					border-radius: 50%
+					display: inline-block
+					font-size: 14px
+					color: #8ab4cf
+					text-align: center
+					line-height: 30px
+				
+		&.list_round
+			li
+				list-style: none
+				padding-left: 25px
+				position: relative
+				margin: 1em 0
+				&:before
+					width: 12px
+					height: 12px
+					content: ''
+					display: block
+					border: 1px solid $accent
+					border-radius: 50%
+					left: 0
+					top: 2px
+					position: absolute
+
 
 .section_news_archive
 	.breadcrumbs
@@ -881,6 +1154,13 @@ img
 		&:hover
 			color: $accent
 
+.section_intro-screen
+	background-repeat: no-repeat
+	background-position: center
+	height: 400px
+	padding-top: 220px
+	background-size: cover
+
 .footer
 	background-color: #f9f9f9
 	padding-top: 65px
@@ -979,6 +1259,10 @@ img
 	justify-content: space-between
 	padding-left: 40px
 	padding-right: 20px
+	p
+		font-size: 16px
+	.heading
+		margin-bottom: 1em
 	.bar__heading
 		font-size: 36px
 		color: #000000
@@ -989,6 +1273,14 @@ img
 	.btn
 		margin-top: auto
 		margin-bottom: auto
+
+	&.bar_w-100p
+		display: block
+		height: auto
+		padding-left: 0
+		padding-right: 0
+		padding-top: 30px
+		padding-bottom: 30px
 
 .side-menu
 	border: 1px solid #efefef
@@ -1007,6 +1299,26 @@ img
 		margin-bottom: 20px
 
 
+.section_soc
+	background-image: url(../img/bg-cost.jpg)
+	background-repeat: no-repeat
+	background-position: center left
+	background-size: cover
+	padding-top: 60px
+	padding-bottom: 60px
+	.heading
+		width: 100%
+		border-bottom: 1px solid #d8d8d8
+		line-height: 1.2
+		padding-bottom: 0.5em
+		margin-bottom: 0.5em
+	.text
+		font-size: 18px
+		color: #000000
+
+	.btn
+		margin-top: 2em
+	
 .section_contacts
 	position: relative
 	.phones
