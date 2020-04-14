@@ -1784,7 +1784,66 @@
     </symbol>
 
 
+    <symbol id="home" viewBox="0 0 76.33 76.33">
+        <defs>
+            <clipPath id="clip-path" transform="translate(0 0)">
+            <rect width="76.33" height="76.33" style="fill: none"/>
+            </clipPath>
+        </defs>
+        <title>1</title>
+        <g style="clip-path: url(#clip-path)">
+            <path d="M75.83,38.16A37.67,37.67,0,1,1,38.16.5,37.67,37.67,0,0,1,75.83,38.16Z" transform="translate(0 0)" style="fill: none;stroke: #cee5f0;stroke-miterlimit: 10"/>
+        </g>
+        <g>
+            <path d="M22.46,21.81H42.09v4.58a.65.65,0,0,0,.65.65h4.58V37.18h1.31V26.39a.63.63,0,0,0-.19-.46l-5.23-5.24a.71.71,0,0,0-.47-.19H25.08V19.19H49.94v19.3h1.31v-20a.66.66,0,0,0-.66-.65H24.43a.65.65,0,0,0-.66.65v2h-2a.65.65,0,0,0-.65.66V57.79a.65.65,0,0,0,.65.65H51.25V57.13H22.46Zm20.94.93,3,3h-3Zm0,0" transform="translate(0 0)" style="fill: #76b4d0"/>
+            <rect x="23.77" y="28.35" width="17.01" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="30.97" width="17.01" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="33.58" width="17.01" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="36.2" width="13.08" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="38.82" width="13.08" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="41.43" width="13.08" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="49.28" width="13.08" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="51.9" width="13.08" height="1.31" style="fill: #76b4d0"/>
+            <rect x="23.77" y="54.52" width="13.08" height="1.31" style="fill: #76b4d0"/>
+            <rect x="24.43" y="23.12" width="1.31" height="1.31" style="fill: #76b4d0"/>
+            <rect x="27.04" y="23.12" width="1.31" height="1.31" style="fill: #76b4d0"/>
+            <rect x="29.66" y="23.12" width="1.31" height="1.31" style="fill: #76b4d0"/>
+            <rect x="32.28" y="23.12" width="8.5" height="1.31" style="fill: #76b4d0"/>
+        </g>
+        <polygon points="55.58 47.37 47.71 39.5 39.83 47.37 43.08 47.37 43.08 53.84 52.33 53.84 52.33 47.37 55.58 47.37" style="fill: none;stroke: #76b4d0;stroke-miterlimit: 10"/>
+        <rect x="46.26" y="49.48" width="2.89" height="4.35" style="fill: none;stroke: #76b4d0;stroke-miterlimit: 10"/>
+        <line x1="43.08" y1="47.37" x2="52.33" y2="47.37" style="fill: none;stroke: #76b4d0;stroke-miterlimit: 10"/>
+    </symbol>
 
+    <symbol id="time" viewBox="0 0 76.33 76.33">
+        <defs>
+            <clipPath id="clip-path" transform="translate(0 0)">
+            <rect width="76.33" height="76.33" style="fill: none"/>
+            </clipPath>
+        </defs>
+        <title>2</title>
+        <g style="clip-path: url(#clip-path)">
+            <path d="M75.83,38.16A37.67,37.67,0,1,1,38.16.5,37.67,37.67,0,0,1,75.83,38.16Z" transform="translate(0 0)" style="fill: none;stroke: #cee5f0;stroke-miterlimit: 10"/>
+        </g>
+        <g>
+            <path d="M19.7,21.07H39.36v4.59a.65.65,0,0,0,.65.65H44.6V36.47h1.31V25.66a.69.69,0,0,0-.19-.47L40.48,20a.67.67,0,0,0-.47-.19H22.32V18.45h24.9V37.78h1.31v-20a.65.65,0,0,0-.66-.65H21.66a.65.65,0,0,0-.65.65v2H19a.65.65,0,0,0-.65.65v36.7a.65.65,0,0,0,.65.65h18V56.45H19.7Zm21,.93,3,3h-3Z" transform="translate(0 0)" style="fill: #76b4d0"/>
+            <rect x="21.01" y="27.62" width="17.04" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="30.24" width="17.04" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="32.86" width="17.04" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="35.48" width="13.11" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="38.11" width="13.11" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="40.73" width="13.11" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="48.59" width="13.11" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="51.21" width="13.11" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.01" y="53.83" width="13.11" height="1.31" style="fill: #76b4d0"/>
+            <rect x="21.66" y="22.38" width="1.31" height="1.31" style="fill: #76b4d0"/>
+            <rect x="24.29" y="22.38" width="1.31" height="1.31" style="fill: #76b4d0"/>
+            <rect x="26.91" y="22.38" width="1.31" height="1.31" style="fill: #76b4d0"/>
+            <rect x="29.53" y="22.38" width="8.52" height="1.31" style="fill: #76b4d0"/>
+            <path d="M57.76,47.34a.59.59,0,0,0-.42-.17.63.63,0,0,0-.42.17l-1,1a9.78,9.78,0,0,0-9.68-8.75h-.1a9.79,9.79,0,0,0-9.73,9.73v.1a9.77,9.77,0,0,0,9.41,9.73h0a.6.6,0,0,0,0-1.2,8.61,8.61,0,0,1-8.24-8h1.14a.6.6,0,0,0,0-1.2H37.6a8.61,8.61,0,0,1,8-8v.79a.6.6,0,1,0,1.2,0v-.79a8.55,8.55,0,0,1,7.91,7.39l-.9-.9a.59.59,0,0,0-.42-.17.64.64,0,0,0-.43.18.62.62,0,0,0,0,.84l2,2a.63.63,0,0,0,.23.16h0l.06,0,.11,0h.07l.11,0h.07a.64.64,0,0,0,.22-.14l2-2a.63.63,0,0,0,.17-.43A.6.6,0,0,0,57.76,47.34Z" transform="translate(0 0)" style="fill: #76b4d0"/>
+            <path d="M50.66,44.32a.63.63,0,0,0-.43.17l-3.68,3.69a1.3,1.3,0,0,0-.78,0l-1.69-1.69a.58.58,0,0,0-.41-.17.57.57,0,0,0-.43.18.6.6,0,0,0,0,.84L44.92,49a1.3,1.3,0,0,0,.68,1.57,1.39,1.39,0,0,0,.56.13h0A1.3,1.3,0,0,0,47.4,49l3.68-3.68a.61.61,0,0,0,0-.85A.59.59,0,0,0,50.66,44.32Zm-4.42,5.16a.12.12,0,0,1-.16,0,.16.16,0,0,1,0-.08.13.13,0,0,1,0-.07.1.1,0,0,1,.16,0A.1.1,0,0,1,46.24,49.48Z" transform="translate(0 0)" style="fill: #76b4d0"/>
+        </g>
+    </symbol>
 
 </svg>
 

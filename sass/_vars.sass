@@ -27,6 +27,18 @@ $gutter: $grid-gutter-width
 .text-accent
     color: $accent !important
 
+.circle
+    font-size: 46px
+    color: #219cdc
+    width: 72px
+    height: 72px
+    display: inline-block
+    border-radius: 50%
+    border: 1px solid #cbe4ef
+    text-align: center
+    line-height: 82px
+    margin-right: 5px
+
 .btn
     width: 170px
     height: 41px
@@ -307,6 +319,10 @@ a.btn
         &.highlighted
             &:after
                 width: 170px
+
+        &.highlighted-full
+            &:after
+                width: 100%
     
     &.heading_md-sm
         font-size: 30px
@@ -317,10 +333,26 @@ a.btn
         &.highlighted
             &:after
                 width: 73px
+
+        &.highlighted-full
+            &:after
+                width: 100%
     &.heading_xs
         font-size: 18px
 
     &.highlighted
+        padding-bottom: 0.5em
+        position: relative
+        &:after
+            content: ''
+            display: block
+            height: 1px
+            position: absolute
+            bottom: 0
+            left: 0
+            background-color: $accent
+
+    &.highlighted-full
         padding-bottom: 0.5em
         position: relative
         &:after
@@ -436,6 +468,14 @@ a.btn
     &_separate
         padding-top: 18px
         padding-bottom: 16px
+
+    &_inside
+        padding-top: 48px
+        width: 100%
+        z-index: 30
+        position: absolute
+        left: 0 
+        top: 127px
         
 .nums
     display: flex
@@ -879,7 +919,6 @@ hr
             color: #fff
             border-right: 1px solid #eeeeee
             border-bottom: 1px solid #eeeeee
-
         td
             border-right: 1px solid #eeeeee
             border-bottom: 1px solid #eeeeee
@@ -893,7 +932,6 @@ hr
             font-size: 14px
             small
                 font-size: 10px
-            
         &.style-2
             border: 0
             tr
@@ -909,6 +947,23 @@ hr
             td
                 border-right: 1px solid #f0f7fa
                 border-bottom: 1px solid #f0f7fa
+
+        &.style-3
+            border: 0
+            tr
+                border-right: 1px solid #eeeeee
+                border-left: 1px solid #eeeeee
+            th
+                color: #fff
+                background-color: #219cdc
+                border-right: 1px solid #eeeeee
+                border-bottom: 1px solid #eeeeee
+                &:last-child
+                    border-right: 0
+            td
+                border-right: 1px solid #eeeeee
+                border-bottom: 1px solid #eeeeee
+                
 
 .inputfile
     width: 0.1px

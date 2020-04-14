@@ -993,7 +993,7 @@ img
 	
 	.list
 		font-size: 16px
-		color: #666666
+		color: #000
 		margin: 1em 0
 		&.list_circle
 			list-style: none
@@ -1010,7 +1010,7 @@ img
 					position: absolute
 					top: 50%
 					left: 0
-					margin-top: -15px
+					margin-top: -17px
 					border: 1px solid #d1e3ee
 					border-radius: 50%
 					display: inline-block
@@ -1018,6 +1018,30 @@ img
 					color: #8ab4cf
 					text-align: center
 					line-height: 30px
+		&.list_circle-lg
+			li
+				counter-increment: my-awesome-counter
+				position: relative
+				padding-left: 100px
+				margin: 2em 0
+				list-style-type: none
+				min-height: 72px
+				&:before
+					content: counter(my-awesome-counter)
+					width: 72px
+					height: 72px
+					position: absolute
+					top: 50%
+					left: 0
+					margin-top: -38px
+					border: 1px solid #cbe4ef
+					border-radius: 50%
+					display: inline-block
+					font-size: 40px
+					color: #219cdc
+					text-align: center
+					line-height: 72px
+
 				
 		&.list_round
 			li
@@ -1036,7 +1060,22 @@ img
 					top: 2px
 					position: absolute
 
-
+		&.list_dash
+			color: #000
+			li
+				list-style: none
+				padding-left: 25px
+				position: relative
+				margin: 1em 0
+				&:before
+					width: 9px
+					height: 2px
+					content: ''
+					display: block
+					background-color: #219cdc
+					left: 0
+					top: 8px
+					position: absolute
 .section_news_archive
 	.breadcrumbs
 		margin-bottom: 30px
@@ -1281,6 +1320,8 @@ img
 		padding-right: 0
 		padding-top: 30px
 		padding-bottom: 30px
+
+	
 
 .side-menu
 	border: 1px solid #efefef
