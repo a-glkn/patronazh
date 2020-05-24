@@ -1,5 +1,9 @@
 $(function() {
 
+	$('.toggle-block').click(function() {
+		$(this).toggleClass('active');
+	});
+
 	$('select').selectize();
 
 	$('.feedback-slider').slick({
