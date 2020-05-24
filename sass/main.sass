@@ -308,6 +308,32 @@ img
 			background-image: url(../img/icon-zoom.png)
 			background-repeat: no-repeat
 			background-position: 8px center
+		&_time
+			width: 85px
+			border-color: transparent !important
+			margin-bottom: 0 !important
+
+	.time-input
+		display: inline-flex
+		border: 1px solid #eee
+		border-radius: 4px
+		position: relative
+		&:after
+			content: '-'
+			display: block
+			position: absolute
+			top: -2px
+			left: 50%
+			margin-left: -2px
+			font-size: 14px
+			color: #666666
+			height: 41px
+			line-height: 41px
+	.form__label_lg
+		font-size: 16px
+		color: #000
+		margin-top: auto
+		margin-bottom: auto
 	.form__textarea
 		height: 101px
 		padding-top: 10px
@@ -583,6 +609,11 @@ img
 			flex-basis: 50%
 			&:after
 				display: none
+
+	&_three-cols
+		flex-wrap: wrap
+		.cards-list__item
+			flex-basis: 33.33333%
 
 .section_variants
 	.heading_md
@@ -962,6 +993,8 @@ img
 		font-size: 16px
 		line-height: 1.5
 		margin: 1em 0
+		&.sm
+			font-size: 14px
 	h1
 		font-size: 36px
 		margin: 1em 0
@@ -1078,6 +1111,26 @@ img
 					left: 0
 					top: 8px
 					position: absolute
+		
+		&.list_zero-based
+			list-style: none
+			counter-reset: my-awesome-counter
+			>li
+				counter-increment: my-awesome-counter
+				padding-left: 30px
+				position: relative
+				font-size: 16px
+				color: #000
+				margin-top: 1em
+				line-height: 1.5
+				&:before
+					position: absolute
+					top: -1px
+					left: 0
+					content: "0"counter(my-awesome-counter)" "
+					color: #219cdc
+					font-size: 18px
+
 .section_news_archive
 	.breadcrumbs
 		margin-bottom: 30px
