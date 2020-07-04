@@ -10,6 +10,12 @@
     
 // ≥1200px
 +media-breakpoint-down(lg)
+    .tariff-card
+        &__feature
+            font-size: 14px
+
+        &__offer
+            font-size: 16px
     .bar
         .bar__heading
             font-size: 24px
@@ -54,8 +60,20 @@
         &__item
             &-text
                 padding-right: 15px
+
+    .cards-list 
+        &_v-2
+            .cards-list__item
+                padding-left: 10px
+                padding-top: 15px
+                padding-right: 10px
+            &.cards-list_bd-top
+                .cards-list__item
+                    &:before
+                        display: block
 // ≥992px
 +media-breakpoint-down(md)
+
     .block-direction
         height: auto
     .num-list
@@ -177,6 +195,23 @@
                 display: none
             &-text
                 padding-right: 0
+
+    .cards-list 
+        &_v-2
+            &.cards-list_bd-top
+                .cards-list__item
+                    &:before
+                        display: none
+    .section__text 
+        p.xlg
+            font-size: 18px
+
+    .tariff-card
+        height: auto
+        margin-bottom: 30px
+        &__img
+            img
+                width: 100%
 // ≥768px
 +media-breakpoint-down(sm)
 
