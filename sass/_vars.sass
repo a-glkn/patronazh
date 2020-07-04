@@ -106,6 +106,14 @@ $gutter: $grid-gutter-width
             border-color: $accent
             color: $accent
 
+    &.btn_light
+        background-color: #fff
+        color: #219cdc
+        border: 1px solid #219cdc
+        &:hover
+            background-color: #219cdc
+            color: #fff
+
 a.btn
     text-decoration: none
     line-height: 41px
@@ -382,6 +390,8 @@ a.btn
         margin: 1em 0
         &.lg
             font-size: 18px
+        &.xlg
+            font-size: 20px
 
 .slick-arrow
     width: 17px
@@ -948,6 +958,108 @@ a.btn
         color: #000
         line-height: 1.5
         font-weight: 500
+
+.tariff-card
+    position: relative
+    padding-bottom: 172px
+    border: 1px solid #f9f9f9
+    border-radius: 6px
+    transition: .3s ease
+    height: 100%
+    &__img
+        position: relative
+        &:after
+            content: ''
+            display: block
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%)
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 100%
+    &__title
+        font-size: 22px
+        font-weight: 500
+        color: #000
+        padding-left: 20px
+        padding-right: 20px
+        padding-bottom: .5em
+        margin-bottom: 1em
+        position: relative
+        &:after
+            content: ''
+            display: block
+            width: calc(100% - 40px)
+            height: 1px
+            background-color: #f3f3f3
+            position: absolute
+            bottom: 0
+            left: 20px
+    &__feature
+        display: flex
+        font-size: 16px
+        color: #000
+        justify-content: space-between
+        position: relative
+        line-height: 21px
+        padding-left: 50px
+        padding-right: 20px
+        margin-bottom: 1em
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            left: 20px
+            top: 0
+            width: 21px
+            height: 21px
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-image: url(../img/check.svg)
+        &-count
+    
+    &__offer
+        position: absolute
+        font-size: 19px
+        color: #219cdc
+        padding-top: 0.75em
+        padding-bottom: 0.75em
+        bottom: 100px
+        left: 0
+        padding-left: 20px
+        padding-right: 20px
+        width: 100%
+        &:before
+            content: ''
+            display: block
+            width: calc(100% - 40px)
+            height: 1px
+            background-color: #f3f3f3
+            position: absolute
+            top: 0
+            left: 20px
+        &:after
+            content: ''
+            display: block
+            width: calc(100% - 40px)
+            height: 1px
+            background-color: #f3f3f3
+            position: absolute
+            bottom: 0
+            left: 20px
+    &__btns
+        padding-left: 20px
+        padding-right: 20px
+        display: flex
+        position: absolute
+        left: 0
+        bottom: 30px
+        width: 100%
+        .btn
+            width: 50%
+    &:hover
+        transform: translateY(-10px)
+        box-shadow: 0px 7px 49px 0px rgba(0, 0, 0, 0.11)
 
 .icon-scheme
     display: flex
