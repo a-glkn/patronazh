@@ -610,11 +610,39 @@ img
 			&:after
 				display: none
 
+	&_four-cols
+		justify-content: space-between
+		.cards-list__item
+			padding-top: 20px
+			padding-bottom: 20px
+			flex-basis: calc(25% - 20px)
+			border: 1px solid #eaeaea
+			&:after
+				display: none
+			&-text
+				position: relative
+				top: 1em
+				transition: .2s ease
+			&-link
+				font-size: 14px
+				color: #219cdc
+				opacity: 0
+				transition: .2s ease
+				text-decoration: none
+				&:hover
+					color: #219cdc
+			&:hover
+				.cards-list__item
+					&-text
+						top: 0
+					&-link
+						opacity: 1
 	&_three-cols
 		flex-wrap: wrap
 		.cards-list__item
 			flex-basis: 33.33333%
-
+	&_links
+		
 	&_v-2
 		.cards-list__item
 			flex-wrap: wrap
