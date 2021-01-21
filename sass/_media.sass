@@ -310,6 +310,17 @@
             width: 100%
             &-title
                 font-size: 20px
+
+    .tabs
+        &-header
+            display: flex
+            height: auto
+            flex-direction: column
+            &__item
+                min-width: 1px
+                line-height: 1
+                padding-top: 20px
+                padding-bottom: 20px
 // ≥576px
 +media-breakpoint-down(xs)
     .footer .footer__copyright
@@ -356,6 +367,10 @@
                 margin-bottom: 1em
                 margin-left: auto
                 margin-right: auto
+
+    .intro-slider_dots-2
+        .slick-dots
+            bottom: 0
 /*==========  Mobile First  ==========*/
 
 // ≤576px
