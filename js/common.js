@@ -6,6 +6,19 @@ $(function() {
 
 	$('select').selectize();
 
+	$('.tabs').on('click', '.tabs-header__item', function () {
+		var index = $(this).index();
+		var $cont = $(this).parents('.tabs');
+		
+		$('.tabs-header .tabs-header__item.active', $cont).removeClass('active');
+		$('.tabs-header .tabs-header__item:eq(' + index + ')', $cont).addClass('active');
+
+		$('.tabs-content .tabs-content__item.active', $cont).removeClass('active');
+		$('.tabs-content .tabs-content__item:eq(' + index + ')', $cont).addClass('active');
+
+		return false;
+	});
+
 	$('.feedback-slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,

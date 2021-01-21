@@ -1156,6 +1156,34 @@ hr
     height: 1px
     background-color: #eeeeee
 
+.tabs
+    &-header
+        display: flex
+        height: 70px
+        &__item
+            cursor: pointer
+            color: #010101
+            background: #f9f9f9
+            font-size: 18px
+            padding-left: 20px
+            padding-right: 20px
+            text-align: center
+            min-width: 260px
+            line-height: 70px
+            border: 1px solid transparent
+            transition: .3s ease
+            &.active
+                border-color: #219cdc
+                border-radius: 4px
+                background-color: #ffffff
+                color: #219cdc
+
+    &-content
+        &__item
+            display: none
+            &.active
+                display: block
+
 .table
     overflow-x: scroll
     position: relative
