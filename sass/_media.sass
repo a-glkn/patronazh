@@ -16,6 +16,14 @@
 
         &__offer
             font-size: 16px
+
+        &.tariff-card_horizontal
+            padding-bottom: 50px
+            .tariff-card__img
+                min-width: 44%
+
+            .tariff-card__btns
+                width: 65%
     .bar
         .bar__heading
             font-size: 24px
@@ -73,7 +81,7 @@
                         display: block
 // ≥992px
 +media-breakpoint-down(md)
-
+    
     .block-direction
         height: auto
     .num-list
@@ -223,6 +231,12 @@
         .heading
             margin-top: 1em
             min-height: auto
+
+    .tariff-card
+        &.tariff-card_horizontal
+            display: block
+            padding-bottom: 50px
+            .tariff-card__img
 // ≥768px
 +media-breakpoint-down(sm)
 
@@ -321,6 +335,11 @@
                 line-height: 1
                 padding-top: 20px
                 padding-bottom: 20px
+
+    .tariff-card
+        &.tariff-card_horizontal
+            .tariff-card__btns
+                width: 100%
 // ≥576px
 +media-breakpoint-down(xs)
     .footer .footer__copyright
