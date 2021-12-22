@@ -13,6 +13,10 @@ $gutter: $grid-gutter-width
 .bg-grey
     background-color: #f3f3f3
 
+
+.bg-grey-2
+    background-color: #fafafa
+
 .bg-white
     background-color: #fff
 
@@ -20,6 +24,11 @@ $gutter: $grid-gutter-width
     background-repeat: no-repeat
     background-position: center
     background-size: cover
+
+
+.bg-blue
+    background-color: #f2f7fa
+    
 
 .text-blue
     color: #39a3df
@@ -1742,3 +1751,134 @@ hr
         left: 50%
         bottom: 0
         margin-left: -84px
+
+.pt
+    padding-top: 60px
+
+.pb
+    padding-bottom: 60px
+
+.pt-lg
+    padding-top: 100px
+
+.pb-lg
+    padding-bottom: 100px
+
+
+.icons-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__item
+        display: flex
+        padding-bottom: 40px
+        padding-top: 40px
+        width: calc(50% - 30px)
+        border-top: 1px solid #ebebeb
+        &_px-sm
+            padding-top: 20px
+            padding-bottom: 20px
+        &_bd-0
+            border: 0 !important
+        &:nth-child(1), &:nth-child(2)
+            border-top: 0
+        &-icon
+            margin-right: 20px
+            .icon
+                width: 77px
+                height: 77px
+        &-heading
+            font-size: 18px
+            color: #000
+            margin-bottom: 0.5em
+        &-content
+            font-size: 14px
+            line-height: 1.7
+            color: #2a2a2a
+            margin: auto 0
+            .num
+                font-size: 26px
+                line-height: 1
+                color: #cbe4ef
+                margin-bottom: 0.5em
+            &_sm
+                font-size: 16px
+                .num
+                    margin-bottom: 0
+            &_md
+                font-size: 18px
+                .num
+                    margin-bottom: 0
+            &_lg
+                font-size: 22px
+                line-height: 1.27
+                .num
+                    margin-bottom: 0
+
+            &_lh-1-333
+                line-height: 1.333
+
+    &_three-cols
+        justify-content: flex-start
+        .icons-list
+            &__item
+                padding-top: 20px
+                padding-bottom: 20px
+                border: 0
+                width: 33.3333%
+                padding-left: 10px
+                padding-right: 10px
+
+
+.abon-card
+    padding: 20px
+    margin-top: 30px
+    padding-bottom: 30px
+    background-color: #ffffff
+    box-shadow: 0px 10px 5px 0px rgba(171, 171, 171, 0.15)
+    &__name
+        font-size: 24px
+        color: #656565
+        font-weight: 500
+        margin-bottom: 0.5em
+    span
+        font-size: 18px
+        color: #056697
+        display: block  
+    &__digit
+        font-size: 18px
+        color: #656565
+        display: block
+        margin-top: 5px
+        span
+            color: #056697
+            font-size: 60px
+
+.section_capture
+	.form-wrapper
+		border-radius: 6px
+		padding: 30px
+		border: 1px solid #cbe4ef
+
+
+
+
+
+.section_capture .form-wrapper .form
+    &__input
+        width: 100%
+        height: 48px
+        padding-left: 20px
+        padding-right: 20px
+        border: 1px solid #cbe4ef
+        border-radius: 4px
+        color: #000
+        font-size: 14px
+        outline: none
+        margin-bottom: 20px
+        transition: .3s ease
+        &_lg
+            height: 60px
+        &:focus
+            border-color: #00669c
+                
