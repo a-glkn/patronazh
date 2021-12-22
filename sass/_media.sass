@@ -248,6 +248,31 @@
             position: relative
             &:after
                 display: none
+
+
+    .pt
+        padding-top: 50px
+    .pb
+        padding-bottom: 50px
+    .pt-lg
+        padding-top: 70px
+    .pb-lg
+        padding-bottom: 70px
+
+    .icons-list 
+        &__item
+            width: 100%
+            &:nth-child(2)
+                border-top: 1px solid #ebebeb
+            &-content
+                &_lg
+                    font-size: 18px
+    .icons-list 
+        &_three-cols
+            .icons-list 
+                &__item
+                    border: 0
+                    width: 50% !important
 // ≥768px
 +media-breakpoint-down(sm)
 
@@ -351,6 +376,12 @@
         &.tariff-card_horizontal
             .tariff-card__btns
                 width: 100%
+
+    .icons-list 
+        &_three-cols
+            .icons-list 
+                &__item
+                    width: 100% !important
 // ≥576px
 +media-breakpoint-down(xs)
     .footer .footer__copyright
