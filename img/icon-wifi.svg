@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 57.5C54.1421 57.5 57.5 54.1421 57.5 50C57.5 45.8579 54.1421 42.5 50 42.5C45.8579 42.5 42.5 45.8579 42.5 50C42.5 54.1421 45.8579 57.5 50 57.5Z" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50 72.5V72.525" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.5 42.5V42.525" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M72.5 42.5V42.525" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 70.25C36.5884 68.586 33.6532 66.0858 31.4676 62.9823C29.282 59.8788 27.9172 56.2728 27.5 52.5" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 70.25C63.4116 68.586 66.3468 66.0858 68.5324 62.9823C70.718 59.8788 72.0828 56.2728 72.5 52.5" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.5 32.4998C39.5202 29.2097 44.5551 27.4121 49.75 27.4121C54.9449 27.4121 59.9798 29.2097 64 32.4998" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="50" cy="50" r="49.5" stroke="#A4DDFF"/>
+</svg>

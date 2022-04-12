@@ -4,6 +4,14 @@ $(function() {
 		$(this).toggleClass('active');
 	});
 
+	$('.faq__q').on('click', function() {
+		console.log('1111');
+
+		var cont = $(this).parents('.faq');
+
+		$(cont).toggleClass('active');
+	});
+
 	$('select').selectize();
 
 	$('.tabs').on('click', '.tabs-header__item', function () {
@@ -18,6 +26,12 @@ $(function() {
 
 		return false;
 	});
+
+	// $('.img-slider').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	dots: true
+	// });
 
 	$('.feedback-slider').slick({
 		slidesToShow: 3,
@@ -206,4 +220,5 @@ $(function() {
 			</svg>
 		</button>`
 	});
+
 });

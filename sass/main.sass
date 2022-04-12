@@ -121,7 +121,7 @@ img
 
 .main-wrapper
 	overflow-x: hidden
-
+	width: 100%
 .header
 	z-index: 100
 	position: relative
@@ -497,7 +497,27 @@ img
 		.checkbox
 			margin-bottom: 0
 
-	
+	&_style-2
+		.form__input
+			border: 2px solid #A4DDFF
+			height: 60px
+			font-size: 18px
+			margin-bottom: 20px
+			&:placeholder
+				color: #777B84
+		.form__textarea
+			height: 200px
+			border: 2px solid #A4DDFF
+			font-size: 18px
+			margin-bottom: 20px
+			&:placeholder
+				color: #777B84
+
+
+.bd-grey
+	border-width: 1px !important
+	border-color: #D6DBE1 !important
+
 .num-list
 	display: flex
 	flex-wrap: wrap
@@ -765,6 +785,124 @@ img
 	&.feedback-slider_no-pt
 		.slick-list
 			padding-top: 0
+
+	&_style-2
+		margin-left: -15px
+		margin-right: -15px
+		.slick-list
+			padding-top: 0
+		.feedback-slider__item
+			padding: 20px
+			border-radius: 5px
+			padding-bottom: 80px
+			&-img
+				position: static !important
+				margin-top: 0 !important
+				margin-left: 0 !important
+				img
+					width: 100% !important
+					height: auto !important
+					border-radius: 5px !important
+					border: none !important
+
+			&-tags
+				margin-top: 30px
+				a
+					font-style: normal
+					font-weight: 400
+					font-size: 18px
+					line-height: 140%
+					color: #219CDC
+					text-decoration: none
+			&-heading
+				font-style: normal !important
+				font-weight: 400 !important
+				font-size: 24px !important
+				line-height: 1.05 !important
+				color: #303844 !important
+				border: 0 !important
+				margin-top: 15px !important
+				margin-bottom: 20px !important
+				padding-bottom: 0 !important
+			&-text
+				font-style: normal !important
+				font-weight: 400 !important
+				font-size: 18px !important
+				line-height: 140% !important
+				color: #666B71 !important
+			&-date
+				font-style: normal !important
+				font-weight: 400 !important
+				font-size: 18px !important
+				line-height: 140% !important
+				color: #666B71 !important
+				border: 0 !important
+				bottom: 35px !important
+				left: 20px !important
+				width: calc(100% - 40px) !important
+
+
+
+.icons-set
+	position: relative
+	&:after
+		top: 70px
+		left: -10px
+		position: absolute
+		width: 1140px
+		height: 460px
+		content: ''
+		display: block
+		background-image: url(../img/circles.svg)
+		background-repeat: no-repeat
+		background-position: center
+	&__item
+		text-align: center
+		position: relative
+		z-index: 2
+		&_1
+			margin-top: 50px
+		&_3
+			margin-top: 50px
+		&_4
+			margin-top: 68px
+		&_6
+			margin-top: 68px
+		&_7
+			margin-top: -120px
+		&_8
+			margin-top: -120px
+		&-icon
+			display: inline-block
+			width: 82px
+			height: 82px
+			margin-bottom: 10px
+			svg
+				width: 82px
+				height: 82px
+		&-title
+			font-style: normal
+			font-weight: 400
+			font-size: 22px
+			line-height: 140%
+			text-align: center
+			color: #666B71
+
+		&_main
+			.icons-set
+				&__item
+					&-icon
+						width: 236px
+						height: 236px
+						svg
+							width: 236px
+							height: 236px
+					&-title
+						max-width: 385px
+						display: inline-block
+
+
+
 .section_feedback
 	.feedback-slider
 		margin-top: 20px
@@ -1096,7 +1234,9 @@ img
 	ul, ol
 		font-size: 16px
 		list-style-position: inside
-	
+	ul.xl
+		li
+			font-size: 40px
 	.list
 		font-size: 16px
 		color: #000
@@ -1563,5 +1703,41 @@ img
 			z-index: 10
 			background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 33.3%, rgba(204,192,0,0) 100%)
 
+.section_smart-desc
+	.section__text
+		p
+			font-size: 24px
+
+
+.section_imgs
+	img
+		border-radius: 6px
+		margin-bottom: 30px
+
+	.img-slider
+		display: none
+	.row-imgs
+.img-slider
+	.slick-arrow
+		z-index: 10
+		cursor: pointer
+		&.slick-prev
+			left: 15px
+		&.slick-next
+			right: 15px
+	&__item
+		height: 100%
+		min-height: 100%
+
+	.slick-track
+		display: flex
+		.slick-slide
+			display: flex
+			height: auto
+			align-items: center
+			justify-content: center
+
+.section_contacts
+	
 
 @import "media" // Always at the end
