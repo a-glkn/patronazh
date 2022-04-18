@@ -121,12 +121,18 @@ $(function() {
 		pauseOnFocus: false,
 	});
 
-	$('.img-slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: true,
+	$('.img-slider').each(function() {
+		var len = $('.img-slider__item', this).length;
+
+		$(this).slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: (len > 1),
+			adaptiveHeight: true
+		});
 	});
+	
 
 	$('.img-slider').click(function (e) { 
 		e.preventDefault();
