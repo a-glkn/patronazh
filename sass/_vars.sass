@@ -26,9 +26,17 @@ $gutter: $grid-gutter-width
     background-size: cover
 
 
+.comp-wrapper
+    width: 100%
+    position: relative
+    overflow-x: hidden
+
 .bg-blue
     background-color: #f2f7fa
     
+
+.bg-light-blue
+    background-color: #F2FAFF
 
 .text-blue
     color: #39a3df
@@ -125,6 +133,23 @@ $gutter: $grid-gutter-width
         &:hover
             background-color: #219cdc
             color: #fff
+
+    &_glow
+        padding: 16px 20px
+        background: linear-gradient(289.1deg, #076197 1.06%, #6BBFF1 90.98%)
+        box-shadow: 0px 4px 14px rgba(57, 181, 255, 0.7)
+        border-radius: 10px
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        color: #FFFFFF
+        width: auto
+        height: 52px
+        transition: .3s ease
+        &:hover
+            background: linear-gradient(289.1deg, #009FFF 1.06%, #39B5FF 90.98%)
+
 
 a.btn
     text-decoration: none
@@ -330,7 +355,10 @@ a.btn
 
 .heading
     color: #000000
-
+    &_giant
+        font-size: 72px
+        font-weight: bold
+        line-height: 80%
     &.heading_lg
         font-size: 48px
 
@@ -2041,3 +2069,264 @@ hr
             background-color: #8A5C9B
 
     
+.bg-rib
+    background-repeat: no-repeat
+    background-position: center 141px
+    background-image: url(../img/rib.svg)
+
+
+.stack
+    position: relative
+    width: 514px
+    height: 409px
+    .stack-el
+        width: 514px
+        height: 409px
+        border-radius: 20px
+        position: absolute
+        overflow: hidden
+        top: 0
+        left: 0
+        transition: 1.2s transform
+        transform: rotate(15deg)
+        &_white
+            background-color: #fff
+        &_blue
+            background-color: #DBF1FF
+        &_photo
+            opacity: 0
+            transition: .8s opacity
+
+
+
+    &.animated
+        .stack-el
+            &_white
+                transform: rotate(-15deg)
+            &_blue
+                transform: rotate(0deg)
+            &_photo
+                opacity: 1
+
+    &_v-2
+        .stack-el
+            transform: rotate(-15deg)
+
+        &.animated
+            .stack-el
+                &_white
+                    transform: rotate(0)
+                &_blue
+                    transform: rotate(15deg)
+
+
+
+.chat
+    display: inline-block
+    padding: 20px
+    border-radius: 10px
+    background-color: #fff
+    position: absolute
+    z-index: 2
+    box-shadow: 0px 4px 14px rgba(57, 181, 255, 0.1)
+    &-img
+        position: relative
+        padding-left: 30px
+        &:before
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            background-color: #DBF1FF
+        img
+            border-radius: 50%
+            position: relative
+            z-index: 2
+        &_no
+            padding-left: 0
+            &:before
+                display: none
+            img
+                border-radius: 0
+
+
+    &-phrase
+        margin-top: 8px
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 120%
+        padding: 10px
+        color: #14303F
+        border-radius: 10px
+        border: 1px solid #DBF1FF
+
+    &-name
+        margin-top: 8px
+        a
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 120%
+            color: #14303F
+            text-decoration: none
+            display: inline-block
+            padding-right: 24px
+            background-repeat: no-repeat
+            background-position: top right
+            background-image: url(../img/arr-chat.svg)
+
+
+.stack-container
+    position: relative
+
+
+.stack-container-1
+    .chat-1
+        top: -120px
+        left: -69px
+
+    .chat-2
+        top: 102px
+        right: -118px
+
+
+
+.stack-container-2
+    .chat-1
+        top: -124px
+        right: -25.5px
+
+    .chat-2
+        bottom: -115px
+        left: 3.5px
+
+
+
+.form-comp
+    display: flex
+    justify-content: space-around
+    &__input
+        padding: 17px 10px 15px
+        width: 270px
+        background: #FFFFFF
+        border-radius: 10px
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        color: #14303F
+        border: 0
+
+
+    &__btn
+        cursor: pointer
+        padding: 16px 20px
+        height: 53px
+        background: linear-gradient(289.1deg, #0065A2 1.06%, #004A76 90.98%)
+        border-radius: 10px
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        color: #FFFFFF
+        border: 0
+        transition: .3s ease
+        &:hover
+            opacity: 0.9
+
+
+.gagul
+    width: 238px
+    height: 103px
+    display: block
+.heading-gagul
+    position: relative
+
+.advan
+    &__top
+        display: flex
+        margin-bottom: 21px
+        div 
+            margin: auto 0
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            line-height: 130%
+            color: #000000
+
+    &__icon
+        width: 64px
+        height: 64px
+        border-radius: 10px
+        background-color: #fff
+        display: flex
+        margin-right: 20px !important
+        svg
+            margin: auto
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #14303F
+
+
+.feed-block
+    width: 560px
+    background: #FFFFFF
+    box-shadow: 0px 4px 14px rgba(57, 181, 255, 0.1)
+    border-radius: 20px
+    padding-top: 40px
+    padding-bottom: 60px
+    padding-left: 20px
+    padding-right: 20px
+    height: 100%
+    display: flex
+    flex-direction: column
+    position: relative
+    &:before
+        content: ''
+        width: 44px
+        display: block
+        position: absolute
+        top: 20px
+        right: 20px
+        height: 44px
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-image: url(../img/feed.svg)
+    &__pos
+        padding-right: 160px
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #14303F
+        min-height: 2.6 * 18px
+
+    &__name
+        font-style: normal
+        font-weight: 500
+        font-size: 24px
+        line-height: 130%
+        color: #14303F
+    &__content
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #14303F
+        p
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: #14303F
+            &:last-child
+                margin-bottom: 0
+
+
